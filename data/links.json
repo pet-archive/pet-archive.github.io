@@ -27,26 +27,26 @@
       "title": "P.E.T Arşiv Depoları & Araçlar",
       "items": [
         {
-          "title": "Psych Engine Türkiye",
-          "desc": "Klasik P.E.T kaynak kodu deposu.",
+          "title": "Psych Engine Türkiye - İptal Fork",
+          "desc": "Klasik P.E.T reposu (Devam edilmedi)",
           "url": "https://github.com/SametGkTe/Psych-Engine-Turkey",
           "icon": "fa-box-archive"
         },
         {
-          "title": "Psych Extended Online Türkiye",
-          "desc": "CNE mod uyumluluğu sunan genişletilmiş P.E.T sürümü.",
+          "title": "Psych Extended Online Türkiye - Devam Edilmedi",
+          "desc": "CNE mod uyumluluğu ve Online sunan P.E.T (Devam edilmedi)",
           "url": "https://github.com/SametGkTe/Psych-Extended-Online-Turkey",
           "icon": "fa-cubes"
         },
         {
           "title": "FNF-Porter-Mobile",
-          "desc": "Modları motorlar arası ve mobil cihazlara portlama aracı.",
+          "desc": "Modları Engine'lar arası (V-slice to Psych ve Psych to V-slice) Androidden portlama tool'u.",
           "url": "https://github.com/SametGkTe/FNF-Porter-Mobile",
           "icon": "fa-android"
         },
         {
           "title": "Further Modpack Content",
-          "desc": "Oyun içi modpack tarayıcısının kullandığı paket deposu.",
+          "desc": "Further Engine'ın oyunda mod paketlerini indirmek için kullandığı repo.",
           "url": "https://github.com/SametGkTe/Further-Modpack-Content",
           "icon": "fa-folder-open"
         }

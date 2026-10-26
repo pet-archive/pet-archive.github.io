@@ -1,13 +1,13 @@
 {
-  "title": "Destek & İletişim",
-  "subtitle": "Kurulum sorunları, kırık arşiv bağlantıları veya motor hataları için doğrudan ulaşabileceğiniz hesaplar.",
+  "title": "Destek Ve İletişim",
+  "subtitle": "Kurulum sorunları, bozuk arşiv bağlantıları veya engine hataları için doğrudan ulaşabileceğiniz hesaplar.",
   "channels": [
     {
       "id": "tiktok",
       "platform": "TikTok",
       "handle": "@sametgkte",
       "icon": "fa-tiktok",
-      "description": "Yeni sürüm duyuruları, mod paylaşımları ve kısa kurulum videoları. Yorumlardan veya mesaj üzerinden ulaşabilirsiniz.",
+      "description": "Orjinal yapımcı, Yeni sürüm duyuruları, mod paylaşımları ve kısa kurulum videoları burada. Yorumlardan veya DM üzerinden ulaşabilirsiniz.",
       "url": "https://www.tiktok.com/@sametgkte",
       "openLabel": "TikTok'ta Aç",
       "copyValue": "@sametgkte",
@@ -18,7 +18,7 @@
       "platform": "Discord",
       "handle": "samette111",
       "icon": "fa-discord",
-      "description": "Kurulum hatası, çökme sorunu veya arşivde aradığınız eski bir P.E.T sürümü için arkadaş ekleyip yazabilirsiniz.",
+      "description": "Pek tavsiye edilmez, BUG'lar ve Engine çökme çözümleri için ulaşabilirsiniz.",
       "url": "",
       "openLabel": "Sunucuya Katıl",
       "copyValue": "samette111",
@@ -26,7 +26,7 @@
     }
   ],
   "bugReport": {
-    "title": "GitHub Hata Bildirimi (Issues)",
+    "title": "Further Engine GitHub (Issues)",
     "description": "Oyun içi teknik hataları, çökme kayıtlarını (crash log) veya çalışmayan arşiv linklerini doğrudan GitHub üzerinden bildirebilirsiniz.",
     "url": "https://github.com/SametGkTe/Funky-Further-Engine/issues/new/choose",
     "buttonLabel": "Hata Bildir"
@@ -34,15 +34,11 @@
   "checklist": [
     {
       "title": "Cihaz ve Sürüm Bilgisi",
-      "desc": "Mesaj yazarken PC (Windows/Linux) mi yoksa Android mi kullandığınızı ve motor sürümünü (ör. Further v1.7, P.E.T 0.6.3h) belirtin."
+      "desc": "Mesaj atarken PC Windows mu yoksa Android mi kullandığınızı ve Engine sürümünü (ör. Further v1.7.0, P.E.T V2) belirtin."
     },
     {
-      "title": "Ekran Görüntüsü veya Hata Metni",
-      "desc": "Aldığınız hatanın veya mods/ klasör yapısının ekran görüntüsünü göndermeniz sorunun çok daha hızlı çözülmesini sağlar."
-    },
-    {
-      "title": "Sık Yaşanan Sorunlar İçin Rehberler",
-      "desc": "SmartScreen uyarısı, modların listede görünmemesi veya Android .further klasörü için önce Dokümanlar sayfasına göz atabilirsiniz."
+      "title": "Ekran Görüntüsü (Screenshot) veya Hata Mesajı",
+      "desc": "Aldığınız hatanın (logs/) ekran görüntüsünü göndermeniz sorunun çok daha hızlı çözülmesini sağlar."
     }
   ]
 }
