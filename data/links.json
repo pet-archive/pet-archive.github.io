@@ -1,0 +1,85 @@
+{
+  "groups": [
+    {
+      "title": "Ana Projeler",
+      "items": [
+        {
+          "title": "Further Engine Ana Sitesi",
+          "desc": "Güncel sürüm indirmeleri, global sıralama (Leaderboard) ve modpack vitrini.",
+          "url": "https://further-engine.github.io/",
+          "icon": "fa-globe"
+        },
+        {
+          "title": "Funky-Further-Engine (GitHub)",
+          "desc": "Kaynak kodu, tüm sürümler (Releases) ve sürüm notları.",
+          "url": "https://github.com/SametGkTe/Funky-Further-Engine",
+          "icon": "fa-github"
+        },
+        {
+          "title": "Further Tool",
+          "desc": "Resmi masaüstü mod yöneticisi ve hızlı başlatıcı.",
+          "url": "https://github.com/SametGkTe/Further-Tool",
+          "icon": "fa-wrench"
+        }
+      ]
+    },
+    {
+      "title": "P.E.T Arşiv Depoları & Araçlar",
+      "items": [
+        {
+          "title": "Psych Engine Türkiye",
+          "desc": "Klasik P.E.T kaynak kodu deposu.",
+          "url": "https://github.com/SametGkTe/Psych-Engine-Turkey",
+          "icon": "fa-box-archive"
+        },
+        {
+          "title": "Psych Extended Online Türkiye",
+          "desc": "CNE mod uyumluluğu sunan genişletilmiş P.E.T sürümü.",
+          "url": "https://github.com/SametGkTe/Psych-Extended-Online-Turkey",
+          "icon": "fa-cubes"
+        },
+        {
+          "title": "FNF-Porter-Mobile",
+          "desc": "Modları motorlar arası ve mobil cihazlara portlama aracı.",
+          "url": "https://github.com/SametGkTe/FNF-Porter-Mobile",
+          "icon": "fa-android"
+        },
+        {
+          "title": "Further Modpack Content",
+          "desc": "Oyun içi modpack tarayıcısının kullandığı paket deposu.",
+          "url": "https://github.com/SametGkTe/Further-Modpack-Content",
+          "icon": "fa-folder-open"
+        }
+      ]
+    },
+    {
+      "title": "Geliştirici & Sosyal Hesaplar",
+      "items": [
+        {
+          "title": "TikTok (@sametgkte)",
+          "desc": "Resmi TikTok hesabı — yeni sürüm videoları ve duyurular.",
+          "url": "https://www.tiktok.com/@sametgkte",
+          "icon": "fa-tiktok"
+        },
+        {
+          "title": "Modlama Rehberi (MODDING_TR.md)",
+          "desc": "Lua, HScript ve klasör yapısı hakkında teknik geliştirici notları.",
+          "url": "https://github.com/SametGkTe/Funky-Further-Engine/blob/main/docs/MODDING_TR.md",
+          "icon": "fa-book-open"
+        },
+        {
+          "title": "Hata Bildirimi (GitHub Issues)",
+          "desc": "Oyun hataları veya kırık arşiv linklerini bildirmek için.",
+          "url": "https://github.com/SametGkTe/Funky-Further-Engine/issues/new/choose",
+          "icon": "fa-bug"
+        },
+        {
+          "title": "SametGkTe Bağlantıları",
+          "desc": "Tüm sosyal medya ve duyuru adresleri.",
+          "url": "https://linktr.ee/skysamet",
+          "icon": "fa-users"
+        }
+      ]
+    }
+  ]
+}

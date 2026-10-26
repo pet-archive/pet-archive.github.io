@@ -1,0 +1,1113 @@
+/* =========================================================================
+   P.E.T Docs — Saf Siyah (#000000) + Kırmızı Vurgu Teması
+   Further Engine (sniro.css) tasarım dili temel alınarak sadeleştirilmiştir
+   ========================================================================= */
+@font-face {
+  font-family: 'VCR OSD Mono';
+  src: url('../fonts/vcr.ttf') format('truetype');
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+}
+
+:root {
+  --content-width: 820px;
+  --docs-width: 960px;
+  --pet-red: #ef4444;
+  --pet-crimson: #dc2626;
+  --pet-soft: #fca5a5;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  scrollbar-width: thin;
+  scrollbar-color: #262626 #000000;
+}
+
+html {
+  background-color: #000000 !important;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: #e8e6f0;
+  background: #000000;
+  overflow-x: hidden;
+}
+
+.vcr {
+  font-family: 'VCR OSD Mono', ui-monospace, monospace;
+  letter-spacing: 0.3px;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'VCR OSD Mono', ui-monospace, monospace;
+  letter-spacing: -0.3px;
+  margin: 0;
+  color: #ffffff;
+}
+
+a {
+  color: var(--pet-soft);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+button, a, select, summary, [onclick], [role="button"] {
+  cursor: pointer;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* === ÜST İLERLEME ÇUBUĞU === */
+#ux-loading-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  width: 0%;
+  z-index: 250;
+  background: linear-gradient(90deg, #dc2626, #f87171);
+  box-shadow: 0 0 10px rgba(239, 68, 68, .75);
+  pointer-events: none;
+  opacity: 0;
+}
+#ux-loading-bar.on {
+  opacity: 1;
+}
+
+/* === ÜST MENÜ (Further Engine sniro Bar) === */
+.Bar {
+  background-color: #000000;
+  height: 52px;
+  padding: 5px 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid rgba(255, 255, 255, .08);
+  transition: height .38s cubic-bezier(.2, .8, .2, 1), background-color .28s ease, box-shadow .34s ease, border-color .28s ease;
+  backdrop-filter: blur(8px);
+}
+.Bar:hover {
+  height: 62px;
+  background-color: #050505;
+  border-color: rgba(239, 68, 68, .20);
+  box-shadow: 0 14px 38px rgba(0, 0, 0, .85);
+}
+.BarContent {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: min(1600px, 93vw);
+  height: 100%;
+}
+.BarLogo {
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none !important;
+  transition: transform .28s cubic-bezier(.34, 1.56, .64, 1);
+  flex-shrink: 0;
+}
+.BarLogo:hover {
+  transform: scale(1.02);
+}
+.BarLogo img {
+  height: 32px;
+  width: 32px;
+  object-fit: contain;
+  border-radius: 8px;
+  background: #000000;
+  border: 1px solid rgba(255, 255, 255, .09);
+  transition: transform .38s cubic-bezier(.34, 1.56, .64, 1), border-color .25s ease;
+}
+.Bar:hover .BarLogo img {
+  transform: rotate(-3deg) scale(1.04);
+  border-color: rgba(239, 68, 68, .28);
+}
+.BarLogo-text {
+  font-family: 'VCR OSD Mono', monospace;
+  font-size: 20px;
+  line-height: 1;
+  display: flex;
+  align-items: baseline;
+  gap: 5px;
+}
+.BarLogo-text .fe1 {
+  color: #ffffff;
+}
+.BarLogo-text .fe2 {
+  color: #f87171;
+}
+
+.BarMenuItems {
+  display: flex;
+  margin: auto;
+  align-items: center;
+  gap: 3px;
+}
+.BarMenuItems > a {
+  position: relative;
+  align-items: center;
+  display: flex;
+  gap: 6px;
+  font-family: 'VCR OSD Mono', monospace;
+  font-size: 12.5px;
+  color: #d8d6e2;
+  padding: 7px 11px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color .2s ease, background .2s ease, transform .24s ease, border-color .2s ease;
+}
+.BarMenuItems > a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -1px;
+  width: 0;
+  height: 2px;
+  background: #ef4444;
+  border-radius: 999px;
+  transition: width .28s ease, left .28s ease, opacity .2s ease;
+  opacity: 0;
+}
+.BarMenuItems > a:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, .05);
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+.BarMenuItems > a:hover::after {
+  width: 52%;
+  left: 24%;
+  opacity: 1;
+}
+.BarMenuItems > a.nav-active {
+  color: #fca5a5 !important;
+  background: rgba(239, 68, 68, .12);
+  border-color: rgba(239, 68, 68, .24);
+}
+.BarMenuItems > a.nav-active::after {
+  width: 64%;
+  left: 18%;
+  opacity: 1;
+}
+
+.BarRight {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+#mobile-nav-toggle {
+  display: none;
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+}
+@media (max-width: 980px) {
+  .BarMenuItems { display: none !important; }
+  .hide-mobile { display: none !important; }
+  #mobile-nav-toggle { display: flex !important; }
+}
+@media (min-width: 981px) {
+  #mobile-nav { display: none !important; }
+}
+
+#mobile-nav {
+  position: fixed;
+  inset: 0;
+  top: 52px;
+  z-index: 95;
+  background: rgba(8, 8, 9, .97);
+  backdrop-filter: blur(12px);
+  border-top: 1px solid rgba(255, 255, 255, .08);
+  padding: 14px 18px;
+  flex-direction: column;
+  transition: transform .3s cubic-bezier(.2, .7, .2, 1), opacity .24s ease;
+}
+#mobile-nav.is-closed {
+  transform: translateX(100%);
+  opacity: 0;
+  pointer-events: none;
+  display: flex !important;
+}
+#mobile-nav.is-open {
+  transform: translateX(0);
+  opacity: 1;
+  pointer-events: all;
+  display: flex !important;
+}
+#mobile-nav a.mob-link {
+  padding: 13px 10px;
+  font-size: 15px;
+  font-family: 'VCR OSD Mono', monospace;
+  color: #e8e6f0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, .06);
+  text-decoration: none;
+  border-radius: 8px;
+}
+#mobile-nav a.mob-link:hover, #mobile-nav a.mob-link.nav-active {
+  background: rgba(239, 68, 68, .12);
+  color: #fca5a5;
+}
+
+/* === ANA GÖVDE VE KARTLAR === */
+.App {
+  color: #fff;
+  margin: auto;
+  min-height: 100vh;
+  padding: 74px 12px 36px 12px;
+  width: 100%;
+  background: #000000;
+}
+
+.RoundedContents {
+  border-radius: 26px;
+  display: block;
+  max-width: var(--content-width);
+  overflow: hidden;
+  margin: 0 auto 14px auto;
+  background: #0a0a0a;
+  border: 1px solid rgba(255, 255, 255, .08);
+  width: 100%;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, .65);
+}
+.RoundedContents.docs-wide {
+  max-width: var(--docs-width);
+}
+.Item {
+  color: #fff;
+  padding: 22px;
+  background: #0a0a0a;
+}
+@media (max-width: 640px) {
+  .RoundedContents { border-radius: 20px; }
+  .Item { padding: 16px; }
+}
+
+h2 {
+  font-size: 25px;
+  text-align: center;
+}
+h3.fe-divider {
+  overflow: hidden;
+  text-align: center;
+  font-size: 18px;
+}
+h3.fe-divider::before, h3.fe-divider::after {
+  background-color: #1a1a1c;
+  content: "";
+  display: inline-block;
+  height: 2px;
+  position: relative;
+  vertical-align: middle;
+  width: 28%;
+}
+h3.fe-divider::before { margin-left: -28%; right: .6em; }
+h3.fe-divider::after { left: .6em; margin-right: -28%; }
+
+p {
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  line-height: 1.65;
+  margin: 0;
+}
+
+.page { display: none; }
+.page.active {
+  display: block;
+  animation: pageIn .28s cubic-bezier(.2, .7, .2, 1) both;
+}
+@keyframes pageIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: none; }
+}
+
+/* === HERO === */
+.hero-logo {
+  width: 72px;
+  height: 72px;
+  border-radius: 16px;
+  filter: drop-shadow(0 6px 20px rgba(239, 68, 68, .35));
+}
+.title-gradient-fe {
+  font-family: 'VCR OSD Mono', monospace;
+  font-size: 38px;
+  line-height: 1;
+  letter-spacing: -0.8px;
+  color: #ffffff;
+  text-shadow: 0 0 18px rgba(239, 68, 68, .38);
+}
+@media (min-width: 640px) {
+  .title-gradient-fe { font-size: 46px; }
+}
+
+/* === BUTONLAR & GİRİŞ ALANLARI === */
+.FunkinButton {
+  background: #101012;
+  border: 1px solid rgba(255, 255, 255, .11);
+  border-radius: 10px;
+  color: #fff;
+  padding: 8px 14px;
+  font-family: 'VCR OSD Mono', monospace;
+  font-size: 12.5px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  text-decoration: none !important;
+  transition: transform .2s ease, background .2s ease, border-color .2s ease;
+}
+.FunkinButton:hover {
+  background: #18181b;
+  border-color: rgba(239, 68, 68, .42);
+  transform: translateY(-1px);
+}
+.FunkinButton:active {
+  transform: scale(.98);
+}
+.FunkinButton.white {
+  background: #ffffff;
+  color: #000000;
+  border-color: #ffffff;
+  font-weight: 800;
+}
+.FunkinButton.white:hover {
+  background: #e5e5e5;
+  border-color: #e5e5e5;
+}
+.FunkinButton.crimson {
+  background: #dc2626;
+  color: #ffffff;
+  border-color: #ef4444;
+}
+.FunkinButton.crimson:hover {
+  background: #ef4444;
+}
+
+.TabButton {
+  background-color: #101012;
+  border-radius: 10px;
+  color: #d4d2df;
+  padding: 7px 13px;
+  font-family: 'VCR OSD Mono', monospace;
+  font-size: 12px;
+  border: 1px solid rgba(255, 255, 255, .09);
+  transition: background .18s ease, color .18s ease, border-color .18s ease;
+}
+.TabButton:hover {
+  background: #18181b;
+  color: #fff;
+}
+.TabButton.active {
+  background: rgba(239, 68, 68, .16);
+  border-color: rgba(239, 68, 68, .38);
+  color: #fca5a5;
+}
+
+.clean-input {
+  background: #0f0f11 !important;
+  border: 1px solid rgba(255, 255, 255, .11) !important;
+  color: #fff !important;
+  font-family: Inter, sans-serif !important;
+  border-radius: 10px;
+  padding: 9px 12px;
+  font-size: 13px;
+  transition: border-color .2s ease;
+}
+.clean-input:focus {
+  outline: none;
+  border-color: #ef4444 !important;
+}
+
+.kbd-pill {
+  font-family: 'VCR OSD Mono', monospace;
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 5px;
+  background: #060607;
+  border: 1px solid rgba(255, 255, 255, .12);
+  color: #9aa0b6;
+}
+
+/* === KART IZGARALARI & SON EKLENENLER === */
+.Coolbox {
+  background-color: #060607;
+  border-radius: 16px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 15px 16px;
+  border: 1px solid rgba(255, 255, 255, .08);
+  text-decoration: none !important;
+  transition: transform .22s ease, border-color .22s ease, background .22s ease;
+}
+.Coolbox:hover {
+  transform: translateY(-2px);
+  border-color: rgba(239, 68, 68, .36);
+  background: #0d0d10;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+@media (min-width: 640px) {
+  .feature-grid { grid-template-columns: 1fr 1fr; }
+}
+
+.update-row {
+  background: #060608;
+  border: 1px solid rgba(255, 255, 255, .08);
+  border-radius: 13px;
+  padding: 12px 15px;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  text-decoration: none !important;
+  transition: border-color .2s ease, background .2s ease, transform .2s ease;
+}
+.update-row:hover {
+  border-color: rgba(239, 68, 68, .34);
+  background: #0c0c0f;
+  transform: translateY(-1px);
+}
+.update-date {
+  font-family: 'VCR OSD Mono', monospace;
+  font-size: 11px;
+  color: #fca5a5;
+  min-width: 82px;
+  padding-top: 2px;
+  flex-shrink: 0;
+}
+@media (max-width: 520px) {
+  .update-row { flex-direction: column; gap: 4px; }
+  .update-date { min-width: 0; }
+}
+
+/* === DOKÜMANLAR (SOL BAŞLIK LİSTESİ + SAĞ İÇERİK + ALT BAŞLIK LİNKİ) === */
+.DocsLayout {
+  display: grid;
+  grid-template-columns: 230px minmax(0, 1fr);
+  gap: 18px;
+  align-items: start;
+}
+@media (max-width: 800px) {
+  .DocsLayout { grid-template-columns: 1fr; }
+}
+
+.DocsSidebar {
+  background: #050506;
+  border: 1px solid rgba(255, 255, 255, .08);
+  border-radius: 16px;
+  padding: 12px;
+  position: sticky;
+  top: 70px;
+}
+@media (max-width: 800px) {
+  .DocsSidebar { position: static; }
+}
+
+.docs-sidebar-heading {
+  font-family: 'VCR OSD Mono', monospace;
+  font-size: 11px;
+  color: #9aa0b6;
+  padding: 4px 8px 8px 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, .06);
+  margin-bottom: 8px;
+}
+
+.docs-nav-btn {
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border: 1px solid transparent;
+  color: #c8c6d4;
+  padding: 9px 11px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-family: 'VCR OSD Mono', monospace;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 3px;
+  transition: background .16s ease, color .16s ease, border-color .16s ease;
+}
+.docs-nav-btn:hover {
+  background: rgba(255, 255, 255, .05);
+  color: #ffffff;
+}
+.docs-nav-btn.active {
+  background: rgba(239, 68, 68, .13);
+  border-color: rgba(239, 68, 68, .28);
+  color: #fca5a5;
+}
+
+.DocsArticle {
+  background: #050506;
+  border: 1px solid rgba(255, 255, 255, .08);
+  border-radius: 18px;
+  padding: 22px 24px;
+  min-width: 0;
+}
+@media (max-width: 640px) {
+  .DocsArticle { padding: 16px; }
+}
+
+.doc-title {
+  font-family: 'VCR OSD Mono', monospace;
+  font-size: 24px;
+  line-height: 1.2;
+  color: #ffffff;
+  text-align: left;
+}
+.doc-lead {
+  color: #a6a4b5;
+  font-size: 13.8px;
+  line-height: 1.6;
+  margin-top: 6px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, .07);
+}
+
+.doc-section-h {
+  font-family: 'VCR OSD Mono', monospace;
+  font-size: 16px;
+  color: #ffffff;
+  margin: 22px 0 9px 0;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  scroll-margin-top: 78px;
+  border-radius: 8px;
+  transition: background .35s ease, padding .2s ease;
+}
+.doc-section-h.doc-section-flash {
+  background: rgba(239, 68, 68, .13);
+  padding: 5px 9px;
+  margin-left: -9px;
+}
+
+.doc-anchor-btn {
+  background: transparent;
+  border: 1px solid transparent;
+  color: #8f95ab;
+  width: 26px;
+  height: 26px;
+  border-radius: 7px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  opacity: 0.42;
+  flex-shrink: 0;
+  transition: opacity .18s ease, color .18s ease, background .18s ease, border-color .18s ease;
+}
+.doc-section-h:hover .doc-anchor-btn,
+.doc-anchor-btn:hover,
+.doc-anchor-btn:focus-visible {
+  opacity: 1;
+  color: #fca5a5;
+  background: rgba(239, 68, 68, .12);
+  border-color: rgba(239, 68, 68, .28);
+}
+
+.doc-p {
+  color: #d4d2df;
+  font-size: 13.8px;
+  line-height: 1.7;
+  margin-bottom: 11px;
+}
+
+.doc-callout {
+  border-radius: 12px;
+  padding: 12px 14px;
+  margin: 14px 0;
+  border-left: 3px solid #60a5fa;
+  background: #0c0c0f;
+}
+.doc-callout.danger { border-left-color: #ef4444; background: rgba(239, 68, 68, .06); }
+.doc-callout.warning { border-left-color: #f59e0b; background: rgba(245, 158, 11, .06); }
+.doc-callout.info { border-left-color: #60a5fa; background: rgba(59, 130, 246, .06); }
+.doc-callout-title {
+  font-family: 'VCR OSD Mono', monospace;
+  font-size: 12.5px;
+  margin-bottom: 4px;
+  color: #fff;
+}
+.doc-callout-text {
+  font-size: 13px;
+  line-height: 1.6;
+  color: #cbc9d8;
+}
+
+.doc-steps {
+  display: grid;
+  gap: 8px;
+  margin: 12px 0;
+}
+.doc-step {
+  background: #0b0b0d;
+  border: 1px solid rgba(255, 255, 255, .07);
+  border-radius: 12px;
+  padding: 12px 14px;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+.doc-step-num {
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  background: rgba(239, 68, 68, .15);
+  color: #fca5a5;
+  font-family: 'VCR OSD Mono', monospace;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+.doc-step-title {
+  font-family: 'VCR OSD Mono', monospace;
+  font-size: 13px;
+  color: #ffffff;
+  margin-bottom: 3px;
+}
+.doc-step-desc {
+  font-size: 13px;
+  color: #b8b5c8;
+  line-height: 1.55;
+}
+
+/* Akıllı Ekran Görüntüsü */
+.doc-ss-wrap {
+  margin: 14px 0;
+}
+.doc-ss-card {
+  margin: 0;
+  border-radius: 13px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, .10);
+  background: #000;
+  cursor: zoom-in;
+  transition: border-color .2s ease;
+}
+.doc-ss-card:hover {
+  border-color: rgba(239, 68, 68, .4);
+}
+.doc-ss-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.doc-ss-cap {
+  padding: 8px 12px;
+  background: #0c0c0f;
+  border-top: 1px solid rgba(255, 255, 255, .06);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 12px;
+  color: #9aa0b6;
+}
+
+.doc-ss-slot {
+  border: 1px dashed rgba(255, 255, 255, .14);
+  background: #09090b;
+  border-radius: 12px;
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.doc-ss-slot-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12.5px;
+  color: #b0aec0;
+}
+.doc-ss-slot-path {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 11.5px;
+  color: #fca5a5;
+  background: rgba(239, 68, 68, .09);
+  padding: 3px 8px;
+  border-radius: 6px;
+}
+
+.doc-nav-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 24px;
+  padding-top: 15px;
+  border-top: 1px solid rgba(255, 255, 255, .07);
+  flex-wrap: wrap;
+}
+
+/* === ARŞİV KARTLARI (Akıllı Logo Yuvası + Çoklu İndirme Seçenekleri) === */
+.archive-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+@media (min-width: 640px) {
+  .archive-grid { grid-template-columns: 1fr 1fr; }
+}
+.archive-card {
+  background: #060608;
+  border: 1px solid rgba(255, 255, 255, .08);
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  transition: border-color .22s ease, transform .22s ease;
+}
+.archive-card:hover {
+  border-color: rgba(239, 68, 68, .35);
+  transform: translateY(-2px);
+}
+.archive-thumb {
+  margin: -16px -16px 12px -16px;
+  height: 125px;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(255, 255, 255, .06);
+  background: #000;
+}
+.archive-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.archive-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.archive-logo-wrap {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  position: relative;
+}
+.archive-logo-wrap.mini {
+  width: 38px;
+  height: 38px;
+}
+.archive-logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 11px;
+  border: 1px solid rgba(255, 255, 255, .10);
+  background: #000;
+  display: block;
+}
+.archive-logo-wrap.mini .archive-logo-img,
+.archive-logo-wrap.mini .archive-logo-slot {
+  border-radius: 9px;
+}
+.archive-logo-slot {
+  width: 100%;
+  height: 100%;
+  border-radius: 11px;
+  border: 1px dashed rgba(255, 255, 255, .16);
+  background: #0c0c0f;
+  color: #6b7280;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  transition: border-color .2s ease, color .2s ease;
+}
+.archive-logo-wrap.mini .archive-logo-slot {
+  font-size: 13px;
+}
+.archive-card:hover .archive-logo-slot,
+.link-row-card:hover .archive-logo-slot {
+  border-color: rgba(239, 68, 68, .36);
+  color: #fca5a5;
+}
+
+.archive-title {
+  font-family: 'VCR OSD Mono', monospace;
+  font-size: 15px;
+  color: #fff;
+  text-align: left;
+  line-height: 1.25;
+}
+.archive-meta {
+  font-size: 11.5px;
+  color: #8f95ab;
+  margin-top: 3px;
+}
+.archive-desc {
+  font-size: 12.8px;
+  color: #c2c0ce;
+  line-height: 1.55;
+  margin-top: 10px;
+  flex: 1;
+}
+.archive-actions {
+  display: flex;
+  gap: 6px;
+  margin-top: 13px;
+  padding-top: 11px;
+  border-top: 1px solid rgba(255, 255, 255, .06);
+  flex-wrap: wrap;
+}
+.archive-actions a,
+.archive-actions button {
+  font-size: 11.5px;
+  padding: 6.5px 10.5px;
+  border-radius: 8px;
+  font-family: 'VCR OSD Mono', monospace;
+  border: 1px solid rgba(255, 255, 255, .10);
+  background: #121215;
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none !important;
+  transition: background .18s ease, border-color .18s ease, transform .18s ease;
+}
+.archive-actions a.primary,
+.archive-actions button.primary {
+  background: #dc2626;
+  border-color: #ef4444;
+}
+.archive-actions a:hover,
+.archive-actions button:hover {
+  border-color: rgba(239, 68, 68, .48);
+  transform: translateY(-1px);
+  filter: brightness(1.08);
+}
+
+/* Platform Seçim Modalı Satırları */
+.platform-opt-row {
+  background: #060608;
+  border: 1px solid rgba(255, 255, 255, .09);
+  border-radius: 13px;
+  padding: 12px 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #ffffff;
+  text-decoration: none !important;
+  width: 100%;
+  text-align: left;
+  transition: border-color .18s ease, background .18s ease, transform .18s ease;
+}
+.platform-opt-row:hover {
+  border-color: rgba(239, 68, 68, .45);
+  background: #101014;
+  transform: translateY(-1px);
+}
+.platform-opt-row.is-empty {
+  opacity: 0.58;
+}
+.platform-opt-row.is-empty:hover {
+  border-color: rgba(255, 255, 255, .16);
+  background: #09090c;
+  transform: none;
+}
+.platform-opt-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: #121216;
+  border: 1px solid rgba(255, 255, 255, .08);
+  color: #f87171;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 17px;
+  flex-shrink: 0;
+}
+
+/* === LİNK SATIRLARI & DESTEK KARTLARI === */
+.link-row-card {
+  background: #060608;
+  border: 1px solid rgba(255, 255, 255, .08);
+  border-radius: 14px;
+  padding: 13px 15px;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  transition: border-color .2s ease, background .2s ease;
+}
+.link-row-card:hover {
+  border-color: rgba(239, 68, 68, .32);
+  background: #0c0c0f;
+}
+.link-icon-box {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: #111114;
+  border: 1px solid rgba(255, 255, 255, .08);
+  color: #f87171;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.support-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+@media (min-width: 640px) {
+  .support-grid { grid-template-columns: 1fr 1fr; }
+}
+.support-card {
+  background: #060608;
+  border: 1px solid rgba(255, 255, 255, .08);
+  border-radius: 16px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  transition: border-color .22s ease, transform .22s ease;
+}
+.support-card:hover {
+  border-color: rgba(239, 68, 68, .36);
+  transform: translateY(-2px);
+}
+.support-icon-lg {
+  width: 44px;
+  height: 44px;
+  border-radius: 11px;
+  background: #111114;
+  border: 1px solid rgba(255, 255, 255, .09);
+  color: #f87171;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+.support-handle-box {
+  margin-top: 12px;
+  background: #0c0c0f;
+  border: 1px solid rgba(255, 255, 255, .08);
+  border-radius: 10px;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 13.5px;
+  color: #ffffff;
+}
+
+/* === MODALLAR (Ctrl+K Arama & Görsel Büyütme) === */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, .80);
+  backdrop-filter: blur(6px);
+  z-index: 180;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .2s ease;
+}
+.modal-backdrop.open {
+  opacity: 1;
+  pointer-events: all;
+}
+.modal-panel {
+  width: 100%;
+  max-width: 580px;
+  background: #0a0a0c;
+  border: 1px solid rgba(255, 255, 255, .12);
+  border-radius: 20px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, .92);
+  overflow: hidden;
+  max-height: 85vh;
+  display: flex;
+  flex-direction: column;
+}
+.search-hit {
+  padding: 10px 12px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  cursor: pointer;
+}
+.search-hit:hover, .search-hit.active {
+  background: rgba(239, 68, 68, .12);
+}
+
+#toast-host {
+  position: fixed;
+  bottom: 18px;
+  right: 18px;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  pointer-events: none;
+}
+.pet-toast {
+  background: #0d0d10;
+  border: 1px solid rgba(239, 68, 68, .35);
+  color: #fff;
+  padding: 9px 13px;
+  border-radius: 10px;
+  font-family: 'VCR OSD Mono', monospace;
+  font-size: 12px;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, .85);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+}

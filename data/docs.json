@@ -1,0 +1,231 @@
+{
+  "docs": [
+    {
+      "slug": "kurulum",
+      "title": "Kurulum",
+      "summary": "Further Engine ve P.E.T sürümlerinin Windows, Android vb. cihazlara temel kurulumu.",
+      "blocks": [
+        {
+          "type": "heading",
+          "text": "PC Kurulumu (Windows ve Linux)"
+        },
+        {
+          "type": "paragraph",
+          "text": "İndirdiğiniz oyun .zip veya .rar şeklinde gelir. Oyunu doğrudan WinRAR/7-Zip penceresinin içinden çalıştırmayın, aksi halde Temp üzerinden çalıştığından Lime hataları ve asset hataları alabilirsiniz"
+        },
+        {
+          "type": "steps",
+          "items": [
+            {
+              "title": "Arşivi Klasöre Çıkartın",
+              "desc": "İndirdiğiniz ZIP dosyasına sağ tıklayıp Klasöre Çıkart'a basın. İşlem TAMAMEN bittikten sonra oyun klasörünü istediğiniz yere taşıyabilirsiniz"
+            },
+            {
+              "title": "Oyunu Başlatın",
+              "desc": "Klasörün içindeki FurtherEngine.exe (eski P.E.T sürümlerinde PsychEngine.exe) dosyasına çift tıklayarak oyunu açın."
+            }
+          ]
+        },
+        {
+          "type": "screenshot",
+          "src": "assets/img/docs/kurulum-pc.png",
+          "caption": "ZIP'ten klasöre çıkartılmış oyun dosyaları"
+        },
+        {
+          "type": "heading",
+          "text": "Android Kurulumu (.APK)"
+        },
+        {
+          "type": "paragraph",
+          "text": "Mobil sürümlerde modların ve kayıt dosyalarının çalışabilmesi için ilk açılışta depolama izninin verilmesi gerekir."
+        },
+        {
+          "type": "steps",
+          "items": [
+            {
+              "title": "APK'yı Yükleyin ve Uygulamayı bir Kez Açın",
+              "desc": "APK kurulumundan sonra oyunu açın ve ekrana gelen 'Tüm dosyalara erişim / Depolama' iznini onaylayın. Oyun gerekli klasörleri sadece bu aşamada oluşturur."
+            },
+            {
+              "title": "Mod Klasörünü Bulun",
+              "desc": "ZArchiver uygulamasında Ayarlar > Dosya Yöneticisi > 'Gizli dosyaları göster' seçeneğini açın. Ana dizindeki '.FurtherEngine/mods/' (eski P.E.T portlarında '.PsychEngine/mods/') klasörünü görebilirsiniz."
+            }
+          ]
+        },
+        {
+          "type": "screenshot",
+          "src": "assets/img/docs/kurulum-android.png",
+          "caption": "ZArchiver üzerinde gizli dosyaları gösterme ve .further/mods dizini"
+        }
+      ]
+    },
+    {
+      "slug": "modpack-kurulumu",
+      "title": "Modpack Kurulumu",
+      "summary": "Orjinal Mod Paketlerinin indiriliş aşamaları",
+      "blocks": [
+        {
+          "type": "heading",
+          "text": "2. Arşivden İndirilen Modpack'leri Kurma (ZIP / RAR)"
+        },
+        {
+          "type": "paragraph",
+          "text": "Arşiv sekmesinden veya MediaFire/Drive üzerinden indirdiğiniz eski P.E.T modpack dosyaları içinde birden fazla mod barındırır."
+        },
+        {
+          "type": "steps",
+          "items": [
+            {
+              "title": "Modpack Arşivini Açın",
+              "desc": "İndirdiğiniz arşivin içini açtığınızda her modun kendine ait ayrı bir klasörü olduğunu göreceksiniz."
+            },
+            {
+              "title": "Mod Klasörlerini 'mods/' Dizinine Atın",
+              "desc": "Tüm modpack'i tek bir klasör halinde değil, içindeki ayrı mod klasörlerini seçerek doğrudan oyunun 'mods/' (Android'de '.FurtherEngine/mods/') klasörüne kopyalayın."
+            },
+            {
+              "title": "Mods Menüsü (İsteğe Bağlı)",
+              "desc": "Oyunu açıp Mods menüsünden oynamak istediğiniz modları açık hale getirin. Çok büyük paketlerde aynı anda tüm modları açık tutmak RAM kullanımını artırır."
+            }
+          ]
+        },
+        {
+          "type": "screenshot",
+          "src": "assets/img/docs/modpack-klasor.png",
+          "caption": "Modpack içindeki mod klasörlerinin mods/ dizinine aktarılması"
+        },
+        {
+          "type": "callout",
+          "variant": "info",
+          "title": "Further Tool ile Kolay Yönetim",
+          "text": "Yüzlerce mod içeren paketlerde oyun açılmadan önce hangi modların aktif olacağını seçmek için masaüstünde Further Tool aracını kullanabilirsiniz."
+        }
+      ]
+    },
+    {
+      "slug": "diger-mod-kurulumlari",
+      "title": "Diğer Mod Kurulumları",
+      "summary": "Standart klasör modları, iç içe klasör hatası, kendi .exe dosyasıyla gelen modlar ve eski sürüm uyumluluğu.",
+      "blocks": [
+        {
+          "type": "heading",
+          "text": "Standart Klasör Modları (mods/ Sistemi)"
+        },
+        {
+          "type": "paragraph",
+          "text": "GameBanana veya topluluktan indirdiğiniz Psych / Further uyumlu modları oyunun 'mods/' klasörüne atıp ana menüdeki MODS kısmından aktif etmeniz yeterlidir."
+        },
+        {
+          "type": "callout",
+          "variant": "warning",
+          "title": "Mod Oyunda Görünmüyorsa: Çift Klasör Hatası",
+          "text": "ZIP'ten çıkarırken 'mods/ModAdi/ModAdi/pack.json' şeklinde iç içe iki klasör oluşursa oyun modu okuyamaz. Klasöre girdiğinizde pack.json, data/ veya songs/ klasörleri doğrudan görünmelidir ('mods/ModAdi/pack.json')."
+        },
+        {
+          "type": "screenshot",
+          "src": "assets/img/docs/mod-klasor-yapisi.png",
+          "caption": "Doğru ve yanlış mod klasör yapısı"
+        },
+        {
+          "type": "heading",
+          "text": "Kendi .exe Dosyasıyla İnen Bağımsız Modlar"
+        },
+        {
+          "type": "paragraph",
+          "text": "Bazı büyük veya eski modlar sadece klasör olarak değil, kendi özel motoruyla (PsychEngine.exe veya Funkin.exe) tam oyun halinde iner. Bu modları doğrudan 'mods/' klasörüne atmayın; kendi klasöründe ayrı bir oyun olarak çalıştırın."
+        },
+        {
+          "type": "heading",
+          "text": "Eski 0.6.x, CNE ve Mobil Port Modları"
+        },
+        {
+          "type": "steps",
+          "items": [
+            {
+              "title": "Eski Lua Modları Hata Verirse",
+              "desc": "Çok eski Psych 0.6.x scriptleriyle yazılmış bir mod güncel motorda sorun çıkarırsa Arşiv sekmesinden 'Psych Engine Türkiye v0.6.3' sürümünü kullanabilirsiniz."
+            },
+            {
+              "title": "Codename Engine (CNE) Modları",
+              "desc": "CNE yapısına göre hazırlanmış paketler için Arşiv sekmesindeki 'Psych Extended Online Türkiye' sürümü uyumluluk sunar."
+            },
+            {
+              "title": "PC Modları Android'de Çöküyorsa",
+              "desc": "Android büyük/küçük harf farkına ve boşluklu dosya isimlerine ('Resim 1.PNG' gibi) duyarlıdır. Açılmayan PC modlarını FNF-Porter-Mobile aracıyla mobil uyumlu hale getirebilirsiniz."
+            }
+          ]
+        },
+        {
+          "type": "screenshot",
+          "src": "assets/img/docs/diger-mod-port.png",
+          "caption": "Farklı türdeki mod yapıları veya port aracı görünümü"
+        }
+      ]
+    },
+    {
+      "slug": "virus-konulari",
+      "title": "Virüs mü?",
+      "summary": "Bazı projelerin Windows Defender ve VirusTotal üzerinde çıkan uyarıların sebebi ve sahte linklerden korunma.",
+      "blocks": [
+        {
+          "type": "heading",
+          "text": "1. Windows SmartScreen Uyarısı Neden Çıkar?"
+        },
+        {
+          "type": "paragraph",
+          "text": "P.E.T ve Further Engine açık kaynaklı ve tamamen ücretsiz projelerdir. Microsoft'un tanıdığı ticari dijital imza sertifikaları yıllık yüzlerce dolar ücretli olduğu için bağımsız FNF motorları imzasız olarak derlenir. Bu yüzden ilk açılışta 'Windows kişisel bilgisayarınızı korudu' ekranı çıkması normaldir; bu bir virüs tespiti değildir."
+        },
+        {
+          "type": "steps",
+          "items": [
+            {
+              "title": "Kaynağı Doğrulayın",
+              "desc": "Dosyayı resmi Further Engine sitesinden, P.E.T Docs arşivinden veya github.com/SametGkTe adresinden indirdiğinizden emin olun."
+            },
+            {
+              "title": "Ek Bilgi > Yine de Çalıştır",
+              "desc": "Penceredeki 'Ek bilgi' yazısına tıklayıp açılan 'Yine de çalıştır' butonuna basın. Sonraki girişlerde bu ekran tekrar çıkmaz."
+            }
+          ]
+        },
+        {
+          "type": "screenshot",
+          "src": "assets/img/docs/virus-smartscreen.png",
+          "caption": "Windows SmartScreen ekranında 'Ek bilgi' ve 'Yine de çalıştır' adımı"
+        },
+        {
+          "type": "heading",
+          "text": "2. VirusTotal'da Neden 1–3 Uyarı Görünebiliyor? (False-Positive Olayı)"
+        },
+        {
+          "type": "paragraph",
+          "text": "Haxe ve C++ (HXCPP) ile derlenen tüm Psych tabanlı motorlar, mod çalıştırabilmek için içinde Lua ve HScript yorumlayıcısı barındırır. VirusTotal'daki 70+ tarayıcıdan 1-2 tanesi (genellikle küçük yapay zeka tarayıcıları) imzasız her oyun motoruna 'AIDetectMalware' veya 'Generic.susgen' gibi yanlış pozitif (false-positive) etiketler verebilir. Ayrıca özellikle Further Engine Tamamen açık kaynaklıdır ve github-actions ile derlenir, ve tüm herkes oyunun oluşum kodlarını halihazırda inceleyebilir"
+        },
+        {
+          "type": "paragraph",
+          "text": "Kaspersky, Bitdefender, ESET, Malwarebytes ve Microsoft gibi ana antivirüs tarayıcıları 'Temiz' diyorsa dosya güvenlidir."
+        },
+        {
+          "type": "screenshot",
+          "src": "assets/img/docs/virus-virustotal.png",
+          "caption": "VirusTotal üzerinde yanlış pozitif görünümü"
+        },
+        {
+          "type": "heading",
+          "text": "3. Gerçek Tehlikeyi ve Sahte Linkleri Nasıl Anlarsınız?"
+        },
+        {
+          "type": "callout",
+          "variant": "danger",
+          "title": "Şu Durumlarda Dosyayı Kesinlikle Açmayın",
+          "text": "Sadece şarkı/karakter modu olduğunu söyleyen bir klasör modunun içinden 'Setup.exe', şifreli '.rar', '.bat' veya '.scr' çıkıyorsa; MediaFire'da indirme butonuna bastığınızda açılan yan reklam sekmesinden farklı isimde bir .exe indiyse; ya da VirusTotal'da 15+ büyük antivirüs 'Stealer / Trojan' diyorsa dosyayı hemen silin. Genel bir durumda Eğer Windows Defender veya Antivirüs programınız açıksa zaten bu virüsler otomatik olarak silinir"
+        },
+        {
+          "type": "screenshot",
+          "src": "assets/img/docs/virus-sahte-link.png",
+          "caption": "Güvenli mod dosyaları ile şüpheli dosyaların karşılaştırması"
+        }
+      ]
+    }
+  ]
+}

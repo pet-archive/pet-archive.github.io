@@ -1,0 +1,22 @@
+{
+  "items": [
+    {
+      "date": "Ekim 2026",
+      "title": "Destek sayfası ve çoklu indirme seçenekleri eklendi",
+      "desc": "Arşiv kartlarına platform/yedek indirme bağlantıları ile TikTok (@sametgkte) ve Discord (samette111) destek kanalları eklendi.",
+      "href": "#/support"
+    },
+    {
+      "date": "Ekim 2026",
+      "title": "Virüs ve SmartScreen rehberi yayınlandı",
+      "desc": "Windows SmartScreen uyarısı, VirusTotal yanlış pozitif sonuçları ve şüpheli mod kontrolü açıklandı.",
+      "href": "#/docs/virus-konulari"
+    },
+    {
+      "date": "Ekim 2026",
+      "title": "P.E.T eski sürüm ve modpack arşivi açıldı",
+      "desc": "Psych Engine Türkiye 0.6.3h, Extended Online ve yardımcı port araçları arşive eklendi.",
+      "href": "#/archive"
+    }
+  ]
+}

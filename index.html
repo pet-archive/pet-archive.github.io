@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=0.95, maximum-scale=5, user-scalable=yes">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#000000">
+<title>P.E.T Archive — Psych Engine Türkiye</title>
+<meta name="description" content="Psych Engine Türkiye (P.E.T) ve Further Engine kurulum rehberleri, virüs uyarıları açıklaması, eski sürüm/modpack arşivi, bağlantılar ve destek.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="P.E.T Archive">
+<meta property="og:title" content="P.E.T Archive — Psych Engine Türkiye">
+<meta property="og:description" content="Kurulum rehberleri, modpack/engine arşivi, bağlantılar ve destek.">
+<meta property="og:image" content="assets/img/icon.png">
+<link rel="icon" href="assets/img/icon.png" sizes="any">
+<link rel="apple-touch-icon" href="assets/img/icon.png">
+<link rel="stylesheet" href="assets/css/icons.css">
+<link rel="stylesheet" href="assets/css/sniro.css">
+</head>
+<body>
+<a href="#main" style="position:absolute;left:-9999px">İçeriğe atla</a>
+<div id="ux-loading-bar" aria-hidden="true"></div>
+
+<!-- ÜST BAR -->
+<header class="Bar" role="banner">
+  <div class="BarContent">
+    <a href="#/" class="BarLogo" aria-label="P.E.T Archive Ana Sayfa">
+      <img src="assets/img/icon.png" alt="" width="32" height="32">
+      <span class="BarLogo-text"><span class="fe1">P.E.T</span><span class="fe2">ARCHIVE</span></span>
+    </a>
+
+    <nav class="BarMenuItems" aria-label="Ana Menü">
+      <a href="#/" data-nav="home" class="nav-active"><i class="fa-solid fa-home" aria-hidden="true"></i> ANA SAYFA</a>
+      <a href="#/docs" data-nav="docs"><i class="fa-solid fa-book-open" aria-hidden="true"></i> DOKÜMANLAR</a>
+      <a href="#/archive" data-nav="archive"><i class="fa-solid fa-box-archive" aria-hidden="true"></i> ARŞİV</a>
+      <a href="#/links" data-nav="links"><i class="fa-solid fa-link" aria-hidden="true"></i> LİNKLER</a>
+      <a href="#/support" data-nav="support"><i class="fa-solid fa-headset" aria-hidden="true"></i> DESTEK</a>
+    </nav>
+
+    <div class="BarRight">
+      <button type="button" onclick="openSearchModal()" class="FunkinButton" style="padding:7px 11px; font-size:12px" title="Ara (Ctrl+K)">
+        <i class="fa-solid fa-magnifying-glass" style="color:#f87171" aria-hidden="true"></i>
+        <span class="hide-mobile">Ara</span>
+        <span class="kbd-pill hide-mobile">Ctrl+K</span>
+      </button>
+      <a href="https://further-engine.github.io/" target="_blank" rel="noopener" class="FunkinButton white hide-mobile" style="padding:7px 12px; font-size:11.5px">
+        Further Engine <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:10px" aria-hidden="true"></i>
+      </a>
+      <button type="button" onclick="toggleMobileNav()" id="mobile-nav-toggle" aria-label="Menüyü aç" aria-expanded="false" class="FunkinButton">
+        <i class="fa-solid fa-bars" aria-hidden="true"></i>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- MOBİL MENÜ -->
+<div id="mobile-nav" class="is-closed" aria-label="Mobil Menü">
+  <div style="max-width:800px; width:100%; margin:0 auto; display:flex; flex-direction:column; gap:2px">
+    <a href="#/" data-nav="home" onclick="closeMobileNav()" class="mob-link"><i class="fa-solid fa-home" style="width:18px; color:#f87171"></i> ANA SAYFA</a>
+    <a href="#/docs" data-nav="docs" onclick="closeMobileNav()" class="mob-link"><i class="fa-solid fa-book-open" style="width:18px; color:#f87171"></i> DOKÜMANLAR</a>
+    <a href="#/archive" data-nav="archive" onclick="closeMobileNav()" class="mob-link"><i class="fa-solid fa-box-archive" style="width:18px; color:#f87171"></i> ARŞİV</a>
+    <a href="#/links" data-nav="links" onclick="closeMobileNav()" class="mob-link"><i class="fa-solid fa-link" style="width:18px; color:#f87171"></i> LİNKLER</a>
+    <a href="#/support" data-nav="support" onclick="closeMobileNav()" class="mob-link"><i class="fa-solid fa-headset" style="width:18px; color:#f87171"></i> DESTEK</a>
+    <div style="height:1px; background:rgba(255,255,255,.08); margin:10px 0"></div>
+    <div style="display:flex; gap:8px; flex-wrap:wrap">
+      <button type="button" onclick="closeMobileNav(); openSearchModal()" class="FunkinButton" style="flex:1"><i class="fa-solid fa-magnifying-glass"></i> Ara</button>
+      <a href="https://further-engine.github.io/" target="_blank" rel="noopener" class="FunkinButton white" style="flex:1">Further Engine <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:10px"></i></a>
+    </div>
+  </div>
+</div>
+
+<!-- ANA İÇERİK -->
+<main class="App" id="main">
+
+  <!-- ==================== 1. ANA SAYFA ==================== -->
+  <section id="page-home" class="page active">
+    <div class="RoundedContents">
+      <div class="Item" style="text-align:center; padding:30px 22px">
+        <div style="display:flex; flex-direction:column; align-items:center; gap:10px">
+          <img src="assets/img/icon.png" alt="P.E.T Archive" width="72" height="72" class="hero-logo">
+          <h1 class="title-gradient-fe">P.E.T ARCHIVE</h1>
+        </div>
+
+        <p style="margin:12px auto 0 auto; max-width:530px; color:#b4b2c4; font-size:14px">
+          Psych Engine Türkiye (P.E.T) ve Further Engine için Konular, Kayıp ve Silinen / Desteklenmeyen sürümlerin arşivleri.
+        </p>
+
+        <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:10px; margin-top:18px">
+          <a href="#/docs" class="FunkinButton crimson" style="padding:10px 18px; border-radius:11px">
+            <i class="fa-solid fa-book-open"></i> Dokümanlar
+          </a>
+          <a href="#/archive" class="FunkinButton white" style="padding:10px 18px; border-radius:11px">
+            <i class="fa-solid fa-box-archive"></i> P.E.T Arşivi
+          </a>
+          <a href="#/support" class="FunkinButton" style="padding:10px 16px; border-radius:11px">
+            <i class="fa-solid fa-headset" style="color:#f87171"></i> Destek
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- DOKÜMAN BAŞLIKLARI HIZLI GEÇİŞ -->
+    <div class="RoundedContents">
+      <div class="Item">
+        <h3 class="fe-divider">Başlıklar</h3>
+        <div id="home-docs-grid" class="feature-grid" style="margin-top:14px"></div>
+      </div>
+    </div>
+
+    <!-- SON EKLENENLER & GÜNCELLEMELER -->
+    <div class="RoundedContents" id="home-updates-card">
+      <div class="Item">
+        <h3 style="text-align:left; font-size:17px; margin-bottom:12px">Son Eklenenler</h3>
+        <div id="home-updates-list" style="display:grid; gap:8px"></div>
+      </div>
+    </div>
+
+    <!-- ARŞİV ÖNİZLEMESİ -->
+    <div class="RoundedContents">
+      <div class="Item">
+        <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:8px; margin-bottom:12px">
+          <h3 style="text-align:left; font-size:17px">Arşivden Seçmeler</h3>
+          <a href="#/archive" class="FunkinButton" style="font-size:11.5px; padding:6px 12px">Tüm Arşiv →</a>
+        </div>
+        <div id="home-archive-preview" style="display:grid; gap:8px"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 2. DOKÜMANLAR ==================== -->
+  <section id="page-docs" class="page">
+    <div class="RoundedContents docs-wide">
+      <div class="Item">
+        <div class="DocsLayout">
+          <aside class="DocsSidebar" aria-label="Doküman Başlıkları">
+            <div class="docs-sidebar-heading">BAŞLIKLAR</div>
+            <div id="docs-sidebar-list"></div>
+          </aside>
+
+          <article class="DocsArticle" id="docs-article-view" aria-live="polite"></article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 3. ARŞİV ==================== -->
+  <section id="page-archive" class="page">
+    <div class="RoundedContents">
+      <div class="Item" style="text-align:center">
+        <h2>P.E.T Arşivi</h2>
+        <p style="color:#9aa0b6; max-width:540px; margin:6px auto 0 auto; font-size:13.5px">
+          Psych Engine Türkiye döneminden silinen eski motorlar, mod paketleri ve yardımcı araçlar.
+        </p>
+
+        <div style="display:flex; flex-wrap:wrap; justify-content:center; align-items:center; gap:8px; margin-top:15px">
+          <div id="archive-cat-tabs" style="display:flex; flex-wrap:wrap; justify-content:center; gap:6px"></div>
+          <div style="position:relative; min-width:200px; flex:1; max-width:250px">
+            <input id="archive-search" type="search" class="clean-input" placeholder="Arşivde ara…" oninput="renderArchive()" style="width:100%; padding-left:32px">
+            <i class="fa-solid fa-magnifying-glass" style="position:absolute; left:11px; top:50%; transform:translateY(-50%); color:#6b7280; font-size:12px"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="RoundedContents">
+      <div class="Item">
+        <div id="archive-grid" class="archive-grid"></div>
+        <div id="archive-empty" class="hidden" style="text-align:center; padding:28px 14px; color:#9aa0b6; font-size:13px">
+          Eşleşen kayıt bulunamadı.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 4. LİNKLER ==================== -->
+  <section id="page-links" class="page">
+    <div class="RoundedContents">
+      <div class="Item" style="text-align:center">
+        <h2>Bağlantılar</h2>
+        <p style="color:#9aa0b6; max-width:520px; margin:6px auto 0 auto; font-size:13.5px">
+          Further Engine ve P.E.T projelerine ait resmi siteler, GitHub depoları ve geliştirici adresleri.
+        </p>
+      </div>
+    </div>
+
+    <div id="links-groups-host"></div>
+  </section>
+
+  <!-- ==================== 5. DESTEK ==================== -->
+  <section id="page-support" class="page">
+    <div id="support-host"></div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="RoundedContents" style="margin-top:14px">
+    <div class="Item" style="padding:18px 20px">
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(170px, 1fr)); gap:18px">
+        <div>
+          <div style="display:flex; align-items:center; gap:8px">
+            <img src="assets/img/icon.png" alt="" width="22" height="22" style="width:22px; height:22px; border-radius:6px">
+            <span class="vcr" style="font-size:13.5px; color:#fff">P.E.T Archive</span>
+          </div>
+          <p style="font-size:11.5px; color:#8f95ab; margin-top:8px; line-height:1.55; max-width:280px">
+            Psych Engine Türkiye (P.E.T) ve Further Engine için kurulum rehberi, sürüm arşivi ve destek merkezi.
+          </p>
+        </div>
+
+        <nav aria-label="Sayfalar" style="font-size:12px">
+          <div class="vcr" style="font-size:10.5px; color:#9aa0b6; margin-bottom:8px">SAYFALAR</div>
+          <ul style="display:grid; gap:6px; list-style:none; padding:0; margin:0">
+            <li><a href="#/" style="color:#d8d6e2">Ana Sayfa</a></li>
+            <li><a href="#/docs" style="color:#d8d6e2">Dokümanlar</a></li>
+            <li><a href="#/archive" style="color:#d8d6e2">Arşiv</a></li>
+            <li><a href="#/links" style="color:#d8d6e2">Linkler</a></li>
+            <li><a href="#/support" style="color:#d8d6e2">Destek</a></li>
+          </ul>
+        </nav>
+
+        <nav aria-label="İletişim & Projeler" style="font-size:12px">
+          <div class="vcr" style="font-size:10.5px; color:#9aa0b6; margin-bottom:8px">İLETİŞİM & PROJELER</div>
+          <ul style="display:grid; gap:6px; list-style:none; padding:0; margin:0">
+            <li><a href="https://www.tiktok.com/@sametgkte" target="_blank" rel="noopener" style="color:#d8d6e2">TikTok (@sametgkte)</a></li>
+            <li><a href="#/support" onclick="copyText('samette111', 'Discord kopyalandı: samette111')" style="color:#d8d6e2">Discord: samette111</a></li>
+            <li><a href="https://further-engine.github.io/" target="_blank" rel="noopener" style="color:#d8d6e2">Further Engine</a></li>
+            <li><a href="https://github.com/SametGkTe/Funky-Further-Engine" target="_blank" rel="noopener" style="color:#d8d6e2">GitHub Kaynak Kodu</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div style="margin-top:14px; padding-top:12px; border-top:1px solid rgba(255,255,255,.06); display:flex; flex-wrap:wrap; justify-content:space-between; gap:8px; font-size:11px; color:#6b7280">
+        <div>© 2026 SametGkTe <a href="https://github.com/SametGkTe" target="_blank" rel="noopener" style="color:#fca5a5">SametGkTe</a></div>
+        <div>TikTok: <a href="https://www.tiktok.com/@sametgkte" target="_blank" rel="noopener" style="color:#d8d6e2">@sametgkte</a> · Discord: <span style="color:#d8d6e2; cursor:pointer" onclick="copyText('samette111', 'Discord kopyalandı: samette111')" title="Kopyalamak için tıkla">samette111</span></div>
+      </div>
+    </div>
+  </footer>
+
+</main>
+
+<!-- HIZLI ARAMA MODALI (Ctrl+K) -->
+<div id="search-modal" class="modal-backdrop" onclick="if(event.target===this)closeSearchModal()" role="dialog" aria-modal="true" aria-label="Site içi arama">
+  <div class="modal-panel">
+    <div style="padding:13px 15px; border-bottom:1px solid rgba(255,255,255,.08); display:flex; align-items:center; gap:10px">
+      <i class="fa-solid fa-magnifying-glass" style="color:#ef4444; font-size:14px"></i>
+      <input id="global-search-input" type="search" placeholder="Rehber, alt başlık, arşiv veya destek ara…" oninput="runGlobalSearch(this.value)" style="flex:1; background:transparent; border:none; outline:none; color:#fff; font-size:14px; font-family:Inter,sans-serif">
+      <button type="button" onclick="closeSearchModal()" class="kbd-pill" style="cursor:pointer">ESC</button>
+    </div>
+    <div id="global-search-results" style="padding:8px; overflow-y:auto; max-height:60vh; display:grid; gap:3px"></div>
+  </div>
+</div>
+
+<!-- PLATFORM SEÇİM MODALI (Arşiv Çoklu Platform İndirme) -->
+<div id="platform-modal" class="modal-backdrop" onclick="if(event.target===this)closePlatformModal()" role="dialog" aria-modal="true" aria-labelledby="platform-modal-title">
+  <div class="modal-panel" style="max-width:450px">
+    <div style="padding:14px 16px; border-bottom:1px solid rgba(255,255,255,.08); display:flex; align-items:center; justify-content:space-between; gap:12px">
+      <div id="platform-modal-head" style="display:flex; align-items:center; gap:11px; min-width:0">
+        <div>
+          <div id="platform-modal-title" class="vcr" style="font-size:14.5px; color:#fff">Platform Seçin</div>
+          <div id="platform-modal-sub" style="font-size:11.8px; color:#9aa0b6; margin-top:2px">İndirmek istediğiniz sürümü seçin</div>
+        </div>
+      </div>
+      <button type="button" onclick="closePlatformModal()" class="FunkinButton" style="padding:5px 9px; font-size:11px" aria-label="Kapat">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <div id="platform-modal-list" style="padding:12px; overflow-y:auto; max-height:65vh; display:grid; gap:8px"></div>
+  </div>
+</div>
+
+<!-- GÖRSEL BÜYÜTME (LIGHTBOX) -->
+<div id="lightbox-modal" class="modal-backdrop" onclick="closeLightbox()" role="dialog" aria-modal="true" aria-label="Görsel önizleme">
+  <div onclick="event.stopPropagation()" style="max-width:min(1120px, 95vw); max-height:92vh; background:#08080a; border:1px solid rgba(255,255,255,.14); border-radius:16px; overflow:hidden; display:flex; flex-direction:column">
+    <div style="padding:9px 14px; background:#0d0d10; border-bottom:1px solid rgba(255,255,255,.08); display:flex; align-items:center; justify-content:space-between; gap:12px">
+      <span id="lightbox-caption" style="font-size:12.5px; color:#d8d6e2">Görsel</span>
+      <button type="button" onclick="closeLightbox()" class="FunkinButton" style="padding:4px 9px; font-size:11px"><i class="fa-solid fa-xmark"></i> Kapat</button>
+    </div>
+    <div style="overflow:auto; background:#000; display:flex; align-items:center; justify-content:center">
+      <img id="lightbox-img" src="" alt="" style="max-width:100%; max-height:82vh; display:block">
+    </div>
+  </div>
+</div>
+
+<div id="toast-host" aria-live="polite"></div>
+
+<script src="assets/js/fallback-data.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
