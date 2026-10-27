@@ -5,21 +5,9 @@
       "items": [
         {
           "title": "Further Engine Ana Sitesi",
-          "desc": "Güncel sürüm indirmeleri, global sıralama (Leaderboard) ve modpack vitrini.",
+          "desc": "Güncel sürüm indirmeleri, global sıralama (Leaderboard)",
           "url": "https://further-engine.github.io/",
           "icon": "fa-globe"
-        },
-        {
-          "title": "Funky-Further-Engine (GitHub)",
-          "desc": "Kaynak kodu, tüm sürümler (Releases) ve sürüm notları.",
-          "url": "https://github.com/SametGkTe/Funky-Further-Engine",
-          "icon": "fa-github"
-        },
-        {
-          "title": "Further Tool",
-          "desc": "Resmi masaüstü mod yöneticisi ve hızlı başlatıcı.",
-          "url": "https://github.com/SametGkTe/Further-Tool",
-          "icon": "fa-wrench"
         }
       ]
     },
