@@ -1,4 +1,4 @@
-﻿{
+{
   "categories": [
     { "id": "engine", "label": "Engine Arşivi" },
     { "id": "modpack", "label": "Modpack'ler" },
@@ -156,7 +156,7 @@
           "icon": "fa-cloud-arrow-down",
           "primary": true,
           "platforms": {
-            "android": "https://www.mediafire.com/file/tgmf245rhicm1x3/Further-Engine-Beta.apk/file",
+            "android": "https://www.mediafire.com/file/tgmf245rhicm1x3/Further-Engine-Beta.apk/file"
           }
         }
       ],
@@ -233,7 +233,7 @@
               "sub": "Mobil v1.0.0",
               "url": "https://github.com/SametGkTe/FNF-Porter-Mobile/releases/download/v1.0.0/FNF-Porter-For-Mobile-v1.0.0.apk",
               "icon": "fa-android"
-            },
+            }
           ]
         },
         {

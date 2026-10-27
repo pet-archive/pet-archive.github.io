@@ -167,11 +167,62 @@
     if (btn) btn.setAttribute('aria-expanded', 'false');
   };
 
+  /* ---------------------------------------------------------------------
+     VERİ YÜKLEME
+     1) GitHub Pages dosyaları 10 dakika (max-age=600) CDN'de cache'liyor.
+        Her sayfa açılışında URL'e benzersiz ?v=... ekleyip 'no-store'
+        istiyoruz; böylece güncellenen JSON hemen görünür.
+     2) Bir JSON okunamazsa SESSİZCE eski yedeğe düşmek yerine hem konsola
+        hem ekrana uyarı yazıyoruz. (Eskiden bozuk bir JSON, fark edilmeden
+        fallback-data.js içindeki eski içeriğin gösterilmesine yol açıyordu.)
+     --------------------------------------------------------------------- */
+  var DATA_BUST = Date.now();
+
+  function showDataWarning(path, reason) {
+    if (window.console && console.warn) {
+      console.warn('[P.E.T Docs] ' + path + ' okunamadı (' + reason + '). Eski yedek veri kullanılıyor.');
+    }
+    var host = el('data-warning-host');
+    if (!host) {
+      host = document.createElement('div');
+      host.id = 'data-warning-host';
+      host.setAttribute('role', 'alert');
+      host.style.cssText = 'position:fixed;left:12px;right:12px;bottom:12px;z-index:99999;' +
+        'background:#3b1114;border:1px solid #f87171;color:#ffe4e6;border-radius:10px;' +
+        'padding:10px 14px;font:13px/1.5 system-ui,-apple-system,sans-serif;' +
+        'box-shadow:0 8px 30px rgba(0,0,0,.55)';
+      document.body.appendChild(host);
+    }
+    host.innerHTML = '<strong>⚠️ Güncel veri yüklenemedi.</strong> ' +
+      '<code>' + esc(path) + '</code> dosyası okunamadı (' + esc(reason) + '). ' +
+      'Bu sayfa <strong>eski yedek veriyi</strong> gösteriyor. ' +
+      '<button type="button" id="data-warning-retry" style="margin-left:8px;background:#f87171;' +
+      'color:#1a0507;border:0;border-radius:6px;padding:4px 10px;cursor:pointer;font-weight:700">' +
+      'Yeniden dene</button>';
+    var btn = el('data-warning-retry');
+    if (btn) btn.onclick = function () { window.location.reload(); };
+  }
+
   function fetchJsonWithFallback(path, fallbackKey) {
     var fb = (window.PET_FALLBACK && window.PET_FALLBACK[fallbackKey]) ? window.PET_FALLBACK[fallbackKey] : {};
-    return fetch(path, { cache: 'no-cache' })
-      .then(function (r) { return r.ok ? r.json() : fb; })
-      .catch(function () { return fb; });
+    var url = path + (path.indexOf('?') === -1 ? '?' : '&') + 'v=' + DATA_BUST;
+    return fetch(url, { cache: 'no-store' })
+      .then(function (r) {
+        if (!r.ok) {
+          showDataWarning(path, 'HTTP ' + r.status);
+          return fb;
+        }
+        // Response.json() BOM'u yok saysa da, bozuk JSON (ör. sondaki virgül)
+        // burada hata verir — sebebini görünür kılıyoruz.
+        return r.json().catch(function (err) {
+          showDataWarning(path, 'geçersiz JSON: ' + (err && err.message ? err.message : err));
+          return fb;
+        });
+      })
+      .catch(function (err) {
+        showDataWarning(path, err && err.message ? err.message : 'ağ hatası');
+        return fb;
+      });
   }
 
   function loadAllData() {

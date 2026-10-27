@@ -1,26 +1,30 @@
-/* P.E.T Docs — Çevrimdışı (file://) yedek veri aynası */
+/* P.E.T Docs - Cevrimdisi (file://) yedek veri aynasi
+   OTOMATIK URETILDI - elle duzenlemeyin.
+   data/*.json degistiginde: python3 tools/build-fallback.py
+   Kaynak: tools/build-fallback.py
+*/
 window.PET_FALLBACK = {
   "docs": {
     "docs": [
       {
         "slug": "kurulum",
         "title": "Kurulum",
-        "summary": "Further Engine ve P.E.T sürümlerinin PC (Windows/Linux) ve Android cihazlara temel kurulumu.",
+        "summary": "Further Engine ve P.E.T sürümlerinin Windows, Android vb. cihazlara temel kurulumu.",
         "blocks": [
           {
             "type": "heading",
-            "text": "PC Kurulumu (Windows & Linux)"
+            "text": "PC Kurulumu (Windows ve Linux)"
           },
           {
             "type": "paragraph",
-            "text": "İndirdiğiniz motor dosyası .zip veya .rar arşiv formatında gelir. Oyunu doğrudan WinRAR/7-Zip penceresinin içinden çalıştırmayın; aksi halde ses ve görsel dosyaları okunamadığı için oyun hata verir."
+            "text": "İndirdiğiniz oyun .zip veya .rar şeklinde gelir. Oyunu doğrudan WinRAR/7-Zip penceresinin içinden çalıştırmayın, aksi halde Temp üzerinden çalıştığından Lime hataları ve asset hataları alabilirsiniz"
           },
           {
             "type": "steps",
             "items": [
               {
                 "title": "Arşivi Klasöre Çıkartın",
-                "desc": "İndirdiğiniz ZIP dosyasına sağ tıklayıp masaüstünde veya oyun diskinizde boş bir klasöre çıkartın."
+                "desc": "İndirdiğiniz ZIP dosyasına sağ tıklayıp Klasöre Çıkart'a basın. İşlem TAMAMEN bittikten sonra oyun klasörünü istediğiniz yere taşıyabilirsiniz"
               },
               {
                 "title": "Oyunu Başlatın",
@@ -45,12 +49,12 @@ window.PET_FALLBACK = {
             "type": "steps",
             "items": [
               {
-                "title": "APK'yı Yükleyin ve Bir Kez Açın",
-                "desc": "APK kurulumundan sonra oyunu açın ve ekrana gelen 'Tüm dosyalara erişim / Depolama' iznini onaylayın. Oyun gerekli klasörleri bu aşamada oluşturur."
+                "title": "APK'yı Yükleyin ve Uygulamayı bir Kez Açın",
+                "desc": "APK kurulumundan sonra oyunu açın ve ekrana gelen 'Tüm dosyalara erişim / Depolama' iznini onaylayın. Oyun gerekli klasörleri sadece bu aşamada oluşturur."
               },
               {
                 "title": "Mod Klasörünü Bulun",
-                "desc": "ZArchiver uygulamasında Ayarlar > Dosya Listesi > 'Gizli dosyaları göster' seçeneğini açın. Ana dizindeki '.further/mods/' (eski P.E.T portlarında 'PsychEngine/mods/') klasörünü görebilirsiniz."
+                "desc": "ZArchiver uygulamasında Ayarlar > Dosya Yöneticisi > 'Gizli dosyaları göster' seçeneğini açın. Ana dizindeki '.FurtherEngine/mods/' (eski P.E.T portlarında '.PsychEngine/mods/') klasörünü görebilirsiniz."
               }
             ]
           },
@@ -64,28 +68,15 @@ window.PET_FALLBACK = {
       {
         "slug": "modpack-kurulumu",
         "title": "Modpack Kurulumu",
-        "summary": "Oyun içi Modpack tarayıcısı ve arşivden indirilen toplu mod paketlerinin kurulum adımları.",
+        "summary": "Orjinal Mod Paketlerinin indiriliş aşamaları",
         "blocks": [
-          {
-            "type": "heading",
-            "text": "1. Oyun İçi Modpack Menüsü (Further Engine)"
-          },
-          {
-            "type": "paragraph",
-            "text": "Further Engine'in güncel sürümlerinde harici dosya uğraşına gerek kalmadan doğrudan oyun içinden paket indirebilirsiniz. Ana menüden Mods > Modpacks bölümüne girip istediğiniz paketi seçmeniz yeterlidir."
-          },
-          {
-            "type": "screenshot",
-            "src": "assets/img/docs/modpack-oyun-ici.png",
-            "caption": "Oyun içi Modpacks tarayıcısı"
-          },
           {
             "type": "heading",
             "text": "2. Arşivden İndirilen Modpack'leri Kurma (ZIP / RAR)"
           },
           {
             "type": "paragraph",
-            "text": "Arşiv sekmesinden veya MediaFire/Drive üzerinden indirdiğiniz eski P.E.T modpack dosyaları içinde birden fazla mod klasörü barındırır."
+            "text": "Arşiv sekmesinden veya MediaFire/Drive üzerinden indirdiğiniz eski P.E.T modpack dosyaları içinde birden fazla mod barındırır."
           },
           {
             "type": "steps",
@@ -95,12 +86,12 @@ window.PET_FALLBACK = {
                 "desc": "İndirdiğiniz arşivin içini açtığınızda her modun kendine ait ayrı bir klasörü olduğunu göreceksiniz."
               },
               {
-                "title": "Alt Klasörleri 'mods/' Dizinine Atın",
-                "desc": "Tüm modpack'i tek bir üst klasör halinde değil, içindeki ayrı mod klasörlerini seçerek doğrudan oyunun 'mods/' (Android'de '.further/mods/') klasörüne kopyalayın."
+                "title": "Mod Klasörlerini 'mods/' Dizinine Atın",
+                "desc": "Tüm modpack'i tek bir klasör halinde değil, içindeki ayrı mod klasörlerini seçerek doğrudan oyunun 'mods/' (Android'de '.FurtherEngine/mods/') klasörüne kopyalayın."
               },
               {
-                "title": "Mods Menüsünden Kontrol Edin",
-                "desc": "Oyunu açıp Mods menüsünden oynamak istediğiniz modları açık konuma getirin. Çok büyük paketlerde aynı anda tüm modları açık tutmak RAM kullanımını artırabilir."
+                "title": "Mods Menüsü (İsteğe Bağlı)",
+                "desc": "Oyunu açıp Mods menüsünden oynamak istediğiniz modları açık hale getirin. Çok büyük paketlerde aynı anda tüm modları açık tutmak RAM kullanımını artırır."
               }
             ]
           },
@@ -179,8 +170,8 @@ window.PET_FALLBACK = {
       },
       {
         "slug": "virus-konulari",
-        "title": "Virüs Konuları",
-        "summary": "Windows SmartScreen, Windows Defender ve VirusTotal üzerinde çıkan uyarıların sebebi ve sahte linklerden korunma.",
+        "title": "Virüs mü?",
+        "summary": "Bazı projelerin Windows Defender ve VirusTotal üzerinde çıkan uyarıların sebebi ve sahte linklerden korunma.",
         "blocks": [
           {
             "type": "heading",
@@ -210,15 +201,15 @@ window.PET_FALLBACK = {
           },
           {
             "type": "heading",
-            "text": "2. VirusTotal'da Neden 1–3 Uyarı Görünebiliyor? (False-Positive)"
+            "text": "2. VirusTotal'da Neden 1–3 Uyarı Görünebiliyor? (False-Positive Olayı)"
           },
           {
             "type": "paragraph",
-            "text": "Haxe ve C++ (HXCPP) ile derlenen tüm Psych tabanlı motorlar, mod çalıştırabilmek için içinde Lua ve HScript yorumlayıcısı barındırır. VirusTotal'daki 70+ tarayıcıdan 1-2 tanesi (genellikle küçük sezgisel/yapay zeka motorları) imzasız her oyun motoruna 'AIDetectMalware' veya 'Generic.susgen' gibi yanlış pozitif (false-positive) etiketler verebilir."
+            "text": "Haxe ve C++ (HXCPP) ile derlenen tüm Psych tabanlı motorlar, mod çalıştırabilmek için içinde Lua ve HScript yorumlayıcısı barındırır. VirusTotal'daki 70+ tarayıcıdan 1-2 tanesi (genellikle küçük yapay zeka tarayıcıları) imzasız her oyun motoruna 'AIDetectMalware' veya 'Generic.susgen' gibi yanlış pozitif (false-positive) etiketler verebilir. Ayrıca özellikle Further Engine Tamamen açık kaynaklıdır ve github-actions ile derlenir, ve tüm herkes oyunun oluşum kodlarını halihazırda inceleyebilir"
           },
           {
             "type": "paragraph",
-            "text": "Kaspersky, Bitdefender, ESET, Malwarebytes ve Microsoft gibi ana antivirüs motorları 'Temiz' diyorsa dosya güvenlidir. Ayrıca kaynak kodlarımız GitHub üzerinde herkese açıktır."
+            "text": "Kaspersky, Bitdefender, ESET, Malwarebytes ve Microsoft gibi ana antivirüs tarayıcıları 'Temiz' diyorsa dosya güvenlidir."
           },
           {
             "type": "screenshot",
@@ -233,7 +224,7 @@ window.PET_FALLBACK = {
             "type": "callout",
             "variant": "danger",
             "title": "Şu Durumlarda Dosyayı Kesinlikle Açmayın",
-            "text": "Sadece şarkı/karakter modu olduğunu söyleyen bir klasör modunun içinden 'Setup.exe', şifreli '.rar', '.bat' veya '.scr' çıkıyorsa; MediaFire'da indirme butonuna bastığınızda açılan yan reklam sekmesinden farklı isimde bir .exe indiyse; ya da VirusTotal'da 15+ büyük antivirüs 'Stealer / Trojan' diyorsa dosyayı hemen silin."
+            "text": "Sadece şarkı/karakter modu olduğunu söyleyen bir klasör modunun içinden 'Setup.exe', şifreli '.rar', '.bat' veya '.scr' çıkıyorsa; MediaFire'da indirme butonuna bastığınızda açılan yan reklam sekmesinden farklı isimde bir .exe indiyse; ya da VirusTotal'da 15+ büyük antivirüs 'Stealer / Trojan' diyorsa dosyayı hemen silin. Genel bir durumda Eğer Windows Defender veya Antivirüs programınız açıksa zaten bu virüsler otomatik olarak silinir"
           },
           {
             "type": "screenshot",
@@ -261,109 +252,17 @@ window.PET_FALLBACK = {
     ],
     "items": [
       {
-        "id": "pet-classic-063",
-        "title": "Psych Engine Türkiye",
-        "logo": "assets/img/logos/psych-engine-tr.png",
-        "category": "engine",
-        "version": "v0.6.3h",
-        "platforms": "Windows, Android",
-        "size": "198 MB",
-        "description": "Mind Games altyapılı ve Türkçe menülü klasik P.E.T sürümü. Eski 0.6.x Lua modlarıyla uyumludur.",
-        "downloads": [
-          {
-            "label": "Google Drive",
-            "icon": "fa-google-drive",
-            "primary": true,
-            "platforms": {
-              "windows": "",
-              "android": ""
-            }
-          },
-          {
-            "label": "MediaFire",
-            "icon": "fa-cloud-arrow-down",
-            "platforms": {
-              "windows": "",
-              "android": ""
-            }
-          },
-          {
-            "label": "Kaynak Kodu",
-            "url": "https://github.com/SametGkTe/Psych-Engine-Turkey",
-            "icon": "fa-github"
-          }
-        ],
-        "image": ""
-      },
-      {
-        "id": "pet-extended-online",
-        "title": "Psych Extended Online Türkiye",
-        "logo": "assets/img/logos/psych-extended-tr.png",
-        "category": "engine",
-        "version": "v1.2",
-        "platforms": "Windows, Android",
-        "size": "264 MB",
-        "description": "Codename Engine (CNE) mod uyumluluğu ve genişletilmiş modlama desteği içeren P.E.T fork'u.",
-        "downloads": [
-          {
-            "label": "Google Drive",
-            "icon": "fa-google-drive",
-            "primary": true,
-            "platforms": {
-              "windows": "",
-              "android": ""
-            }
-          },
-          {
-            "label": "Kaynak Kodu",
-            "url": "https://github.com/SametGkTe/Psych-Extended-Online-Turkey",
-            "icon": "fa-github"
-          }
-        ],
-        "image": ""
-      },
-      {
-        "id": "pet-legacy-073",
-        "title": "Psych Engine Türkiye (0.7.3 Geçiş Sürümü)",
-        "logo": "assets/img/logos/pet-073.png",
-        "category": "engine",
-        "version": "v0.7.3",
-        "platforms": "Windows, Android",
-        "size": "242 MB",
-        "description": "Further Engine markasına geçilmeden önceki son 0.7.3 tabanlı P.E.T sürümü.",
-        "downloads": [
-          {
-            "label": "Google Drive",
-            "icon": "fa-google-drive",
-            "primary": true,
-            "platforms": {
-              "windows": "",
-              "android": ""
-            }
-          },
-          {
-            "label": "MediaFire",
-            "icon": "fa-cloud-arrow-down",
-            "platforms": {
-              "windows": "",
-              "android": ""
-            }
-          }
-        ],
-        "image": ""
-      },
-      {
-        "id": "further-old-releases",
-        "title": "Further Engine Sürüm Arşivi",
+        "id": "further-engine",
+        "title": "Further Engine",
         "logo": "assets/img/logos/further-engine.png",
         "category": "engine",
-        "version": "v1.0 – v1.7.0",
+        "version": "v1.7.0 - ?",
         "platforms": "Windows, Android, Linux, macOS, iOS",
         "size": "270–330 MB",
-        "description": "Further Engine'in güncel ve geçmiş derlemeleri. Platform seçerek doğrudan istediğiniz cihaz sürümünü indirebilirsiniz.",
+        "description": "Çok stabil olmasada güçlü sistemli, Çoklu-Dil destekli, Daha fazla menüsü olan ve Mobilde ayrıcalığı olan En iyi sürüm.",
         "downloads": [
           {
-            "label": "v1.7.0 İndir",
+            "label": "v1.7.0",
             "icon": "fa-download",
             "primary": true,
             "platforms": {
@@ -375,16 +274,6 @@ window.PET_FALLBACK = {
             }
           },
           {
-            "label": "v1.6.2 (Eski)",
-            "icon": "fa-box-archive",
-            "platforms": {
-              "windows": "https://github.com/SametGkTe/Funky-Further-Engine/releases/download/1.6.2/Further-Engine-Windows-x86_64.zip",
-              "android": "https://github.com/SametGkTe/Funky-Further-Engine/releases/download/1.6.2/Further-Engine-Android.apk",
-              "linux": "https://github.com/SametGkTe/Funky-Further-Engine/releases/download/1.6.2/Further-Engine-Linux-x86_64.zip",
-              "macos": "https://github.com/SametGkTe/Funky-Further-Engine/releases/download/1.6.2/Further-Engine-MacOS-arm64.zip"
-            }
-          },
-          {
             "label": "Tüm Sürümler",
             "url": "https://github.com/SametGkTe/Funky-Further-Engine/releases",
             "icon": "fa-github"
@@ -393,26 +282,100 @@ window.PET_FALLBACK = {
         "image": ""
       },
       {
+        "id": "pet-v2",
+        "title": "Psych Engine Türkiye V2",
+        "logo": "assets/img/logos/pet-v2.png",
+        "category": "engine",
+        "version": "V2",
+        "platforms": "Windows, Android",
+        "size": "162 MB",
+        "description": "Psych Engine Türkiye'nin en çok indirilen sürümlerinden biri, Arayüzü Düz Psych ve Tamamen türkçe (tr-TR.lang).",
+        "downloads": [
+          {
+            "label": "MediaFire",
+            "icon": "fa-cloud-arrow-down",
+            "platforms": {
+              "windows": "https://www.mediafire.com/file/mhiydlf2g2sjfe8/Psych_Engine_V2_%2528PC%2529.zip/file",
+              "android": "https://www.mediafire.com/file/jzymnfx25eofqxo/Psych_Engine_T%25C3%25BCrkiye_V2.apk/file"
+            }
+          }
+        ],
+        "image": ""
+      },
+      {
+        "id": "pet-v1",
+        "title": "Psych Engine Türkiye V1",
+        "logo": "assets/img/logos/pet-v1.png",
+        "category": "engine",
+        "version": "V1",
+        "platforms": "Android",
+        "size": "235 MB",
+        "description": "Psych Engine Türkiye'nin ilk test sürümü, Arayüzü ingilizce, sadece modları Türkçe yapılmaya çalışıldı (Desteği kesildi)",
+        "downloads": [
+          {
+            "label": "MediaFire",
+            "icon": "fa-cloud-arrow-down",
+            "primary": true,
+            "platforms": {
+              "android": "https://www.mediafire.com/file/au8wqcxs6tv9qpy/Psych+Engine+Mobile+0.7.3+[HomuHomu+Port].apk/file"
+            }
+          }
+        ],
+        "image": ""
+      },
+      {
+        "id": "pet-online",
+        "title": "Psych Engine Türkiye - Online",
+        "logo": "assets/img/logos/pet-online.png",
+        "category": "engine",
+        "version": "Online - 0.71h",
+        "platforms": "Windows, Android",
+        "size": "242 MB",
+        "description": "Snirozu tarafından yapılan Psych Online forkunun Türkçeleştirilmiş hali, en stabil ve optimizeli sürümlerden biridir.",
+        "downloads": [
+          {
+            "label": "MediaFire",
+            "icon": "fa-cloud-arrow-down",
+            "platforms": {
+              "windows": "https://www.mediafire.com/file/bate6a83gruqgva/Psych+Engine+T%C3%BCrkiye+-+Online+V1+(PC).zip/file",
+              "android": "https://www.mediafire.com/file/ec1meguhhfttlyu/Psych_Engine_T%25C3%25BCrkiye_-_Online_V1.apk/file"
+            }
+          }
+        ],
+        "image": ""
+      },
+      {
+        "id": "pet-v2.5",
+        "title": "Psych Engine Türkiye V2.5",
+        "logo": "assets/img/logos/pet-v25.png",
+        "category": "engine",
+        "version": "V2.5",
+        "platforms": "Android",
+        "size": "162 MB",
+        "description": "Psych Engine Türkiye'nin en iyi iptal olan sürümlerinden biri, P-Slice temelli, Türkçe arayüz (İptal Edildi).",
+        "downloads": [
+          {
+            "label": "MediaFire",
+            "icon": "fa-cloud-arrow-down",
+            "platforms": {
+              "android": "https://www.mediafire.com/file/tiih8qsqlbfk0s1/%2528REUPLOAD%2529_P-Engine_T%25C3%25BCrkiye_V2.5_Release.apk/file"
+            }
+          }
+        ],
+        "image": ""
+      },
+      {
         "id": "further-modpack",
-        "title": "Further Modpack (300+ Mod)",
-        "logo": "assets/img/logos/further-modpack.png",
+        "title": "Further Mod Paketi Reposu",
+        "logo": "assets/img/logos/further-engine.png",
         "category": "modpack",
         "version": "v1.1.0",
         "platforms": "Windows, Android, Linux",
         "size": "6–7 GB",
-        "description": "Oyun içi Modpack tarayıcısında da yer alan kapsamlı mod koleksiyonu.",
+        "description": "Further Engine Mod Paketinin Açık Modları, Tamamen bitene kadar buradan yayınlanacak (Canlı Modpack Sistemi).",
         "downloads": [
           {
-            "label": "Google Drive",
-            "icon": "fa-google-drive",
-            "primary": true,
-            "platforms": {
-              "windows": "",
-              "android": ""
-            }
-          },
-          {
-            "label": "Paket Deposu",
+            "label": "Github",
             "url": "https://github.com/SametGkTe/Further-Modpack-Content",
             "icon": "fa-github"
           },
@@ -425,68 +388,42 @@ window.PET_FALLBACK = {
         "image": ""
       },
       {
-        "id": "pet-eski-modpack",
-        "title": "P.E.T Klasik Modpack (Silinen Paket)",
-        "logo": "assets/img/logos/pet-modpack.png",
-        "category": "modpack",
-        "version": "Arşiv",
-        "platforms": "Windows, Android",
-        "size": "3.8 GB",
-        "description": "Psych Engine Türkiye döneminde paylaşılan klasik mod derlemesi. Platform linklerini archive.json dosyasından ekleyebilirsiniz.",
+        "id": "further-engine-beta",
+        "title": "Further Engine - Beta",
+        "logo": "assets/img/logos/further-engine.png",
+        "category": "engine",
+        "version": "Beta",
+        "platforms": "Android",
+        "size": "343 MB",
+        "description": "Further Engine'ın Beta Sürümü, çoğu özellik bozuk veya bitirilmemiş, sadece beta kullanıcıları için.",
         "downloads": [
-          {
-            "label": "Google Drive",
-            "icon": "fa-google-drive",
-            "primary": true,
-            "platforms": {
-              "windows": "",
-              "android": ""
-            }
-          },
           {
             "label": "MediaFire",
             "icon": "fa-cloud-arrow-down",
-            "platforms": [
-              {
-                "label": "Windows (PC Paketi)",
-                "sub": "ZIP · Masaüstü",
-                "url": "",
-                "icon": "fa-windows"
-              },
-              {
-                "label": "Android (Mobil Paketi)",
-                "sub": "ZIP / .further Uyumlu",
-                "url": "",
-                "icon": "fa-android"
-              }
-            ]
+            "primary": true,
+            "platforms": {
+              "android": "https://www.mediafire.com/file/tgmf245rhicm1x3/Further-Engine-Beta.apk/file"
+            }
           }
         ],
         "image": ""
       },
       {
-        "id": "gktetok",
-        "title": "GkteTok",
-        "logo": "assets/img/logos/gktetok.png",
-        "category": "modpack",
-        "version": "v1.0",
-        "platforms": "Windows, Android",
-        "size": "95 MB",
-        "description": "Further ekosistemi için hazırlanan topluluk mod paketi.",
+        "id": "pet-v2-beta",
+        "title": "Psych Engine Türkiye V2 - Beta",
+        "logo": "assets/img/logos/pet-v2-beta.png",
+        "category": "engine",
+        "version": "V2 - Beta",
+        "platforms": "Android",
+        "size": "165 MB",
+        "description": "Psych Engine Türkiye V2'nin Beta Sürümü, çoğu şey bitirilmemiş şekilde, sadece beta kullanıcıların test edebilmesi için yapıldı.",
         "downloads": [
           {
-            "label": "Google Drive",
-            "icon": "fa-google-drive",
-            "primary": true,
+            "label": "MediaFire",
+            "icon": "fa-cloud-arrow-down",
             "platforms": {
-              "windows": "",
-              "android": ""
+              "android": "https://www.mediafire.com/file/udvqe3lypv4k98y/Psych+Engine+T%C3%BCrkiye+V2+Beta.apk/file"
             }
-          },
-          {
-            "label": "GitHub",
-            "url": "https://github.com/SametGkTe/GkteTok",
-            "icon": "fa-github"
           }
         ],
         "image": ""
@@ -497,9 +434,9 @@ window.PET_FALLBACK = {
         "logo": "assets/img/logos/further-tool.png",
         "category": "tool",
         "version": "v1.4.1",
-        "platforms": "Android, Windows",
-        "size": "Hafif Araç",
-        "description": "Siyah-beyaz mod yöneticisi, oyun güncelleme kontrolü ve yardımcı araç.",
+        "platforms": "Android",
+        "size": "257kb",
+        "description": "Further Engine için Androidde Mod Yönetebilme, Güvenli Modda başlatma, Further Güncelleme vb. sağlar",
         "downloads": [
           {
             "label": "İndir (v1.4.1)",
@@ -511,12 +448,6 @@ window.PET_FALLBACK = {
                 "sub": "Standart Kurulum · v1.4.1",
                 "url": "https://github.com/SametGkTe/Further-Tool/releases/download/v1.4.1/Further-Tool-v1.4.1-release.apk",
                 "icon": "fa-android"
-              },
-              {
-                "label": "Windows (Masaüstü)",
-                "sub": "Yakında / Depo Üzerinden",
-                "url": "https://github.com/SametGkTe/Further-Tool/releases",
-                "icon": "fa-windows"
               }
             ]
           },
@@ -530,13 +461,13 @@ window.PET_FALLBACK = {
       },
       {
         "id": "fnf-porter-mobile",
-        "title": "FNF-Porter-Mobile",
+        "title": "FNF-Porter Mobile",
         "logo": "assets/img/logos/fnf-porter.png",
         "category": "tool",
         "version": "v1.0.0",
-        "platforms": "Android, Windows, Linux",
-        "size": "Açık Kaynak",
-        "description": "PC modlarını diğer motorlara ve mobil sürümlere uyarlamayı kolaylaştıran araç.",
+        "platforms": "Android",
+        "size": "200kb",
+        "description": "V-slice Modlarını Psych'e, Psych Modlarını V-slice'a çevirmeye yarayan (TAMAMEN DOĞRU DEĞİL) bir tool.",
         "downloads": [
           {
             "label": "İndir (v1.0.0)",
@@ -545,15 +476,9 @@ window.PET_FALLBACK = {
             "platforms": [
               {
                 "label": "Android (APK)",
-                "sub": "Doğrudan Mobil Kurulum · v1.0.0",
+                "sub": "Mobil v1.0.0",
                 "url": "https://github.com/SametGkTe/FNF-Porter-Mobile/releases/download/v1.0.0/FNF-Porter-For-Mobile-v1.0.0.apk",
                 "icon": "fa-android"
-              },
-              {
-                "label": "Windows / Linux (PC)",
-                "sub": "Python Aracı & Kaynak Kodu",
-                "url": "https://github.com/SametGkTe/FNF-Porter-Mobile",
-                "icon": "fa-windows"
               }
             ]
           },
@@ -596,26 +521,26 @@ window.PET_FALLBACK = {
         "title": "P.E.T Arşiv Depoları & Araçlar",
         "items": [
           {
-            "title": "Psych Engine Türkiye",
-            "desc": "Klasik P.E.T kaynak kodu deposu.",
+            "title": "Psych Engine Türkiye - İptal Fork",
+            "desc": "Klasik P.E.T reposu (Devam edilmedi)",
             "url": "https://github.com/SametGkTe/Psych-Engine-Turkey",
             "icon": "fa-box-archive"
           },
           {
-            "title": "Psych Extended Online Türkiye",
-            "desc": "CNE mod uyumluluğu sunan genişletilmiş P.E.T sürümü.",
+            "title": "Psych Extended Online Türkiye - Devam Edilmedi",
+            "desc": "CNE mod uyumluluğu ve Online sunan P.E.T (Devam edilmedi)",
             "url": "https://github.com/SametGkTe/Psych-Extended-Online-Turkey",
             "icon": "fa-cubes"
           },
           {
             "title": "FNF-Porter-Mobile",
-            "desc": "Modları motorlar arası ve mobil cihazlara portlama aracı.",
+            "desc": "Modları Engine'lar arası (V-slice to Psych ve Psych to V-slice) Androidden portlama tool'u.",
             "url": "https://github.com/SametGkTe/FNF-Porter-Mobile",
             "icon": "fa-android"
           },
           {
             "title": "Further Modpack Content",
-            "desc": "Oyun içi modpack tarayıcısının kullandığı paket deposu.",
+            "desc": "Further Engine'ın oyunda mod paketlerini indirmek için kullandığı repo.",
             "url": "https://github.com/SametGkTe/Further-Modpack-Content",
             "icon": "fa-folder-open"
           }
@@ -653,15 +578,15 @@ window.PET_FALLBACK = {
     ]
   },
   "support": {
-    "title": "Destek & İletişim",
-    "subtitle": "Kurulum sorunları, kırık arşiv bağlantıları veya motor hataları için doğrudan ulaşabileceğiniz hesaplar.",
+    "title": "Destek Ve İletişim",
+    "subtitle": "Kurulum sorunları, bozuk arşiv bağlantıları veya engine hataları için doğrudan ulaşabileceğiniz hesaplar.",
     "channels": [
       {
         "id": "tiktok",
         "platform": "TikTok",
         "handle": "@sametgkte",
         "icon": "fa-tiktok",
-        "description": "Yeni sürüm duyuruları, mod paylaşımları ve kısa kurulum videoları. Yorumlardan veya mesaj üzerinden ulaşabilirsiniz.",
+        "description": "Orjinal yapımcı, Yeni sürüm duyuruları, mod paylaşımları ve kısa kurulum videoları burada. Yorumlardan veya DM üzerinden ulaşabilirsiniz.",
         "url": "https://www.tiktok.com/@sametgkte",
         "openLabel": "TikTok'ta Aç",
         "copyValue": "@sametgkte",
@@ -672,7 +597,7 @@ window.PET_FALLBACK = {
         "platform": "Discord",
         "handle": "samette111",
         "icon": "fa-discord",
-        "description": "Kurulum hatası, çökme sorunu veya arşivde aradığınız eski bir P.E.T sürümü için arkadaş ekleyip yazabilirsiniz.",
+        "description": "Pek tavsiye edilmez, BUG'lar ve Engine çökme çözümleri için ulaşabilirsiniz.",
         "url": "",
         "openLabel": "Sunucuya Katıl",
         "copyValue": "samette111",
@@ -680,7 +605,7 @@ window.PET_FALLBACK = {
       }
     ],
     "bugReport": {
-      "title": "GitHub Hata Bildirimi (Issues)",
+      "title": "Further Engine GitHub (Issues)",
       "description": "Oyun içi teknik hataları, çökme kayıtlarını (crash log) veya çalışmayan arşiv linklerini doğrudan GitHub üzerinden bildirebilirsiniz.",
       "url": "https://github.com/SametGkTe/Funky-Further-Engine/issues/new/choose",
       "buttonLabel": "Hata Bildir"
@@ -688,36 +613,32 @@ window.PET_FALLBACK = {
     "checklist": [
       {
         "title": "Cihaz ve Sürüm Bilgisi",
-        "desc": "Mesaj yazarken PC (Windows/Linux) mi yoksa Android mi kullandığınızı ve motor sürümünü (ör. Further v1.7, P.E.T 0.6.3h) belirtin."
+        "desc": "Mesaj atarken PC Windows mu yoksa Android mi kullandığınızı ve Engine sürümünü (ör. Further v1.7.0, P.E.T V2) belirtin."
       },
       {
-        "title": "Ekran Görüntüsü veya Hata Metni",
-        "desc": "Aldığınız hatanın veya mods/ klasör yapısının ekran görüntüsünü göndermeniz sorunun çok daha hızlı çözülmesini sağlar."
-      },
-      {
-        "title": "Sık Yaşanan Sorunlar İçin Rehberler",
-        "desc": "SmartScreen uyarısı, modların listede görünmemesi veya Android .further klasörü için önce Dokümanlar sayfasına göz atabilirsiniz."
+        "title": "Ekran Görüntüsü (Screenshot) veya Hata Mesajı",
+        "desc": "Aldığınız hatanın (logs/) ekran görüntüsünü göndermeniz sorunun çok daha hızlı çözülmesini sağlar."
       }
     ]
   },
   "updates": {
     "items": [
       {
-        "date": "Ekim 2026",
-        "title": "Destek sayfası ve çoklu indirme seçenekleri eklendi",
-        "desc": "Arşiv kartlarına platform/yedek indirme bağlantıları ile TikTok (@sametgkte) ve Discord (samette111) destek kanalları eklendi.",
+        "date": "27 Ekim 2026",
+        "title": "Destek sayfası eklendi :P",
+        "desc": "aciklamayok.",
         "href": "#/support"
       },
       {
-        "date": "Ekim 2026",
-        "title": "Virüs ve SmartScreen rehberi yayınlandı",
-        "desc": "Windows SmartScreen uyarısı, VirusTotal yanlış pozitif sonuçları ve şüpheli mod kontrolü açıklandı.",
+        "date": "26 Ekim 2026",
+        "title": "Virüs ile alakalı doğru rehber yayınlandı",
+        "desc": "VirusTotal Sorunları vs.",
         "href": "#/docs/virus-konulari"
       },
       {
-        "date": "Ekim 2026",
-        "title": "P.E.T eski sürüm ve modpack arşivi açıldı",
-        "desc": "Psych Engine Türkiye 0.6.3h, Extended Online ve yardımcı port araçları arşive eklendi.",
+        "date": "26 Ekim 2026",
+        "title": "Arşiv Açılışı :D",
+        "desc": "Website yapıldı (sanırım)",
         "href": "#/archive"
       }
     ]
