@@ -23,7 +23,7 @@ window.PET_FALLBACK = {
             "type": "steps",
             "items": [
               {
-                "title": "Arşivi Klasöre Çıkartın",
+                "title": "Zip'i Klasöre Çıkartın",
                 "desc": "İndirdiğiniz ZIP dosyasına sağ tıklayıp Klasöre Çıkart'a basın. İşlem TAMAMEN bittikten sonra oyun klasörünü istediğiniz yere taşıyabilirsiniz"
               },
               {
@@ -103,8 +103,8 @@ window.PET_FALLBACK = {
           {
             "type": "callout",
             "variant": "info",
-            "title": "Further Tool ile Kolay Yönetim",
-            "text": "Yüzlerce mod içeren paketlerde oyun açılmadan önce hangi modların aktif olacağını seçmek için masaüstünde Further Tool aracını kullanabilirsiniz."
+            "title": "Further Tool ile Daha kolay",
+            "text": "Yüzlerce mod içeren paketlerde oyun açılmadan önce hangi modların aktif olacağını seçmek için Androidde Further Tool aracını kullanabilirsiniz."
           }
         ]
       },
@@ -115,16 +115,16 @@ window.PET_FALLBACK = {
         "blocks": [
           {
             "type": "heading",
-            "text": "Standart Klasör Modları (mods/ Sistemi)"
+            "text": "Standart Klasör Modları (mods/)"
           },
           {
             "type": "paragraph",
-            "text": "GameBanana veya topluluktan indirdiğiniz Psych / Further uyumlu modları oyunun 'mods/' klasörüne atıp ana menüdeki MODS kısmından aktif etmeniz yeterlidir."
+            "text": "GameBanana veya topluluktan indirdiğiniz Psych / Further uyumlu modları oyunun 'mods/' klasörüne atmanız yeterlidir."
           },
           {
             "type": "callout",
             "variant": "warning",
-            "title": "Mod Oyunda Görünmüyorsa: Çift Klasör Hatası",
+            "title": "Mod Oyunda Görünmüyorsa: Çift Klasör",
             "text": "ZIP'ten çıkarırken 'mods/ModAdi/ModAdi/pack.json' şeklinde iç içe iki klasör oluşursa oyun modu okuyamaz. Klasöre girdiğinizde pack.json, data/ veya songs/ klasörleri doğrudan görünmelidir ('mods/ModAdi/pack.json')."
           },
           {
@@ -149,22 +149,13 @@ window.PET_FALLBACK = {
             "items": [
               {
                 "title": "Eski Lua Modları Hata Verirse",
-                "desc": "Çok eski Psych 0.6.x scriptleriyle yazılmış bir mod güncel motorda sorun çıkarırsa Arşiv sekmesinden 'Psych Engine Türkiye v0.6.3' sürümünü kullanabilirsiniz."
-              },
-              {
-                "title": "Codename Engine (CNE) Modları",
-                "desc": "CNE yapısına göre hazırlanmış paketler için Arşiv sekmesindeki 'Psych Extended Online Türkiye' sürümü uyumluluk sunar."
+                "desc": "Çok eski Psych 0.6.x scriptleriyle yazılmış bir mod güncel motorda (Özellikle V2 - 1.0.4) sorun çıkarırsa Arşiv sekmesinden 'Psych Engine Türkiye V1' sürümünü kullanabilirsiniz."
               },
               {
                 "title": "PC Modları Android'de Çöküyorsa",
                 "desc": "Android büyük/küçük harf farkına ve boşluklu dosya isimlerine ('Resim 1.PNG' gibi) duyarlıdır. Açılmayan PC modlarını FNF-Porter-Mobile aracıyla mobil uyumlu hale getirebilirsiniz."
               }
             ]
-          },
-          {
-            "type": "screenshot",
-            "src": "assets/img/docs/diger-mod-port.png",
-            "caption": "Farklı türdeki mod yapıları veya port aracı görünümü"
           }
         ]
       },
@@ -175,7 +166,7 @@ window.PET_FALLBACK = {
         "blocks": [
           {
             "type": "heading",
-            "text": "1. Windows SmartScreen Uyarısı Neden Çıkar?"
+            "text": "1. Windows'da SmartScreen Neden Çıkar?"
           },
           {
             "type": "paragraph",
@@ -201,7 +192,7 @@ window.PET_FALLBACK = {
           },
           {
             "type": "heading",
-            "text": "2. VirusTotal'da Neden 1–3 Uyarı Görünebiliyor? (False-Positive Olayı)"
+            "text": "2. VirusTotal'da Neden 1–3 Virüs Görünebiliyor? (False-Positive Olayı)"
           },
           {
             "type": "paragraph",
@@ -214,7 +205,7 @@ window.PET_FALLBACK = {
           {
             "type": "screenshot",
             "src": "assets/img/docs/virus-virustotal.png",
-            "caption": "VirusTotal üzerinde yanlış pozitif görünümü"
+            "caption": "VirusTotal üzerinde yanlış görünümü"
           },
           {
             "type": "heading",
@@ -224,12 +215,7 @@ window.PET_FALLBACK = {
             "type": "callout",
             "variant": "danger",
             "title": "Şu Durumlarda Dosyayı Kesinlikle Açmayın",
-            "text": "Sadece şarkı/karakter modu olduğunu söyleyen bir klasör modunun içinden 'Setup.exe', şifreli '.rar', '.bat' veya '.scr' çıkıyorsa; MediaFire'da indirme butonuna bastığınızda açılan yan reklam sekmesinden farklı isimde bir .exe indiyse; ya da VirusTotal'da 15+ büyük antivirüs 'Stealer / Trojan' diyorsa dosyayı hemen silin. Genel bir durumda Eğer Windows Defender veya Antivirüs programınız açıksa zaten bu virüsler otomatik olarak silinir"
-          },
-          {
-            "type": "screenshot",
-            "src": "assets/img/docs/virus-sahte-link.png",
-            "caption": "Güvenli mod dosyaları ile şüpheli dosyaların karşılaştırması"
+            "text": "Sadece şarkı/karakter modu olduğunu söyleyen bir klasör modunun içinden 'Setup.exe', şifreli '.rar', '.bat' veya '.scr' çıkıyorsa; MediaFire'da indirme butonuna bastığınızda açılan yan reklam sekmesinden farklı isimde bir .exe indiyse; ya da VirusTotal'da 15+ büyük antivirüs 'Stealer / Trojan' diyorsa dosyayı hemen silin. Genel bir durumda Eğer Windows Defender veya Antivirüs programınız açıksa zaten bu virüsler otomatik olarak silinir."
           }
         ]
       }
@@ -499,21 +485,9 @@ window.PET_FALLBACK = {
         "items": [
           {
             "title": "Further Engine Ana Sitesi",
-            "desc": "Güncel sürüm indirmeleri, global sıralama (Leaderboard) ve modpack vitrini.",
+            "desc": "Güncel sürüm indirmeleri, global sıralama (Leaderboard)",
             "url": "https://further-engine.github.io/",
             "icon": "fa-globe"
-          },
-          {
-            "title": "Funky-Further-Engine (GitHub)",
-            "desc": "Kaynak kodu, tüm sürümler (Releases) ve sürüm notları.",
-            "url": "https://github.com/SametGkTe/Funky-Further-Engine",
-            "icon": "fa-github"
-          },
-          {
-            "title": "Further Tool",
-            "desc": "Resmi masaüstü mod yöneticisi ve hızlı başlatıcı.",
-            "url": "https://github.com/SametGkTe/Further-Tool",
-            "icon": "fa-wrench"
           }
         ]
       },
