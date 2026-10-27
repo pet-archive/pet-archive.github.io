@@ -5,110 +5,18 @@
     { "id": "tool", "label": "Araçlar" }
   ],
   "items": [
-    {
-      "id": "pet-classic-063",
-      "title": "Psych Engine Türkiye",
-      "logo": "assets/img/logos/psych-engine-tr.png",
-      "category": "engine",
-      "version": "V2",
-      "platforms": "Windows, Android",
-      "size": "198 MB",
-      "description": "Mind Games altyapılı ve Türkçe menülü klasik P.E.T sürümü. Eski 0.6.x Lua modlarıyla uyumludur.",
-      "downloads": [
-        {
-          "label": "Google Drive",
-          "icon": "fa-google-drive",
-          "primary": true,
-          "platforms": {
-            "windows": "",
-            "android": ""
-          }
-        },
-        {
-          "label": "MediaFire",
-          "icon": "fa-cloud-arrow-down",
-          "platforms": {
-            "windows": "",
-            "android": ""
-          }
-        },
-        {
-          "label": "Kaynak Kodu",
-          "url": "https://github.com/SametGkTe/Psych-Engine-Turkey",
-          "icon": "fa-github"
-        }
-      ],
-      "image": ""
-    },
-    {
-      "id": "pet-extended-online",
-      "title": "Psych Extended Online Türkiye",
-      "logo": "assets/img/logos/psych-extended-tr.png",
-      "category": "engine",
-      "version": "v1.2",
-      "platforms": "Windows, Android",
-      "size": "264 MB",
-      "description": "Codename Engine (CNE) mod uyumluluğu ve genişletilmiş modlama desteği içeren P.E.T fork'u.",
-      "downloads": [
-        {
-          "label": "Google Drive",
-          "icon": "fa-google-drive",
-          "primary": true,
-          "platforms": {
-            "windows": "",
-            "android": ""
-          }
-        },
-        {
-          "label": "Kaynak Kodu",
-          "url": "https://github.com/SametGkTe/Psych-Extended-Online-Turkey",
-          "icon": "fa-github"
-        }
-      ],
-      "image": ""
-    },
-    {
-      "id": "pet-legacy-073",
-      "title": "Psych Engine Türkiye (0.7.3 Geçiş Sürümü)",
-      "logo": "assets/img/logos/pet-073.png",
-      "category": "engine",
-      "version": "v0.7.3",
-      "platforms": "Windows, Android",
-      "size": "242 MB",
-      "description": "Further Engine markasına geçilmeden önceki son 0.7.3 tabanlı P.E.T sürümü.",
-      "downloads": [
-        {
-          "label": "Google Drive",
-          "icon": "fa-google-drive",
-          "primary": true,
-          "platforms": {
-            "windows": "",
-            "android": ""
-          }
-        },
-        {
-          "label": "MediaFire",
-          "icon": "fa-cloud-arrow-down",
-          "platforms": {
-            "windows": "",
-            "android": ""
-          }
-        }
-      ],
-      "image": ""
-    },
-    {
-      "id": "further-old-releases",
-      "title": "Further Engine Sürüm Arşivi",
+  {
+      "id": "further-engine",
+      "title": "Further Engine",
       "logo": "assets/img/logos/further-engine.png",
       "category": "engine",
-      "version": "v1.0 – v1.7.0",
+      "version": "v1.7.0 - ?",
       "platforms": "Windows, Android, Linux, macOS, iOS",
       "size": "270–330 MB",
-      "description": "Further Engine'in güncel ve geçmiş derlemeleri. Platform seçerek doğrudan istediğiniz cihaz sürümünü indirebilirsiniz.",
+      "description": "Çok stabil olmasada güçlü sistemli, Çoklu-Dil destekli, Daha fazla menüsü olan ve Mobilde ayrıcalığı olan En iyi sürüm.",
       "downloads": [
         {
-          "label": "v1.7.0 İndir",
+          "label": "v1.7.0",
           "icon": "fa-download",
           "primary": true,
           "platforms": {
@@ -120,16 +28,6 @@
           }
         },
         {
-          "label": "v1.6.2 (Eski)",
-          "icon": "fa-box-archive",
-          "platforms": {
-            "windows": "https://github.com/SametGkTe/Funky-Further-Engine/releases/download/1.6.2/Further-Engine-Windows-x86_64.zip",
-            "android": "https://github.com/SametGkTe/Funky-Further-Engine/releases/download/1.6.2/Further-Engine-Android.apk",
-            "linux": "https://github.com/SametGkTe/Funky-Further-Engine/releases/download/1.6.2/Further-Engine-Linux-x86_64.zip",
-            "macos": "https://github.com/SametGkTe/Funky-Further-Engine/releases/download/1.6.2/Further-Engine-MacOS-arm64.zip"
-          }
-        },
-        {
           "label": "Tüm Sürümler",
           "url": "https://github.com/SametGkTe/Funky-Further-Engine/releases",
           "icon": "fa-github"
@@ -138,26 +36,100 @@
       "image": ""
     },
     {
+      "id": "pet-v2",
+      "title": "Psych Engine Türkiye V2",
+      "logo": "assets/img/logos/pet-v2.png",
+      "category": "engine",
+      "version": "V2",
+      "platforms": "Windows, Android",
+      "size": "162 MB",
+      "description": "Psych Engine Türkiye'nin en çok indirilen sürümlerinden biri, Arayüzü Düz Psych ve Tamamen türkçe (tr-TR.lang).",
+      "downloads": [
+        {
+          "label": "MediaFire",
+          "icon": "fa-cloud-arrow-down",
+          "platforms": {
+            "windows": "https://www.mediafire.com/file/mhiydlf2g2sjfe8/Psych_Engine_V2_%2528PC%2529.zip/file",
+            "android": "https://www.mediafire.com/file/jzymnfx25eofqxo/Psych_Engine_T%25C3%25BCrkiye_V2.apk/file"
+          }
+        }
+      ],
+      "image": ""
+    },
+    {
+      "id": "pet-v1",
+      "title": "Psych Engine Türkiye V1",
+      "logo": "assets/img/logos/pet-v1.png",
+      "category": "engine",
+      "version": "V1",
+      "platforms": "Android",
+      "size": "235 MB",
+      "description": "Psych Engine Türkiye'nin ilk test sürümü, Arayüzü ingilizce, sadece modları Türkçe yapılmaya çalışıldı (Desteği kesildi)",
+      "downloads": [
+        {
+          "label": "MediaFire",
+          "icon": "fa-cloud-arrow-down",
+          "primary": true,
+          "platforms": {
+            "android": "https://www.mediafire.com/file/au8wqcxs6tv9qpy/Psych+Engine+Mobile+0.7.3+[HomuHomu+Port].apk/file"
+          }
+        }
+      ],
+      "image": ""
+    },
+    {
+      "id": "pet-online",
+      "title": "Psych Engine Türkiye - Online",
+      "logo": "assets/img/logos/pet-online.png",
+      "category": "engine",
+      "version": "Online - 0.71h",
+      "platforms": "Windows, Android",
+      "size": "242 MB",
+      "description": "Snirozu tarafından yapılan Psych Online forkunun Türkçeleştirilmiş hali, en stabil ve optimizeli sürümlerden biridir.",
+      "downloads": [
+        {
+          "label": "MediaFire",
+          "icon": "fa-cloud-arrow-down",
+          "platforms": {
+            "windows": "https://www.mediafire.com/file/bate6a83gruqgva/Psych+Engine+T%C3%BCrkiye+-+Online+V1+(PC).zip/file",
+            "android": "https://www.mediafire.com/file/ec1meguhhfttlyu/Psych_Engine_T%25C3%25BCrkiye_-_Online_V1.apk/file"
+          }
+        }
+      ],
+      "image": ""
+    },
+	{
+      "id": "pet-v2.5",
+      "title": "Psych Engine Türkiye V2.5",
+      "logo": "assets/img/logos/pet-v25.png",
+      "category": "engine",
+      "version": "V2.5",
+      "platforms": "Android",
+      "size": "162 MB",
+      "description": "Psych Engine Türkiye'nin en iyi iptal olan sürümlerinden biri, P-Slice temelli, Türkçe arayüz (İptal Edildi).",
+      "downloads": [
+        {
+          "label": "MediaFire",
+          "icon": "fa-cloud-arrow-down",
+          "platforms": {
+            "android": "https://www.mediafire.com/file/tiih8qsqlbfk0s1/%2528REUPLOAD%2529_P-Engine_T%25C3%25BCrkiye_V2.5_Release.apk/file"
+          }
+        }
+      ],
+      "image": ""
+    },
+    {
       "id": "further-modpack",
-      "title": "Further Modpack (300+ Mod)",
-      "logo": "assets/img/logos/further-modpack.png",
+      "title": "Further Mod Paketi Reposu",
+      "logo": "assets/img/logos/further-engine.png",
       "category": "modpack",
       "version": "v1.1.0",
       "platforms": "Windows, Android, Linux",
       "size": "6–7 GB",
-      "description": "Oyun içi Modpack tarayıcısında da yer alan kapsamlı mod koleksiyonu.",
+      "description": "Further Engine Mod Paketinin Açık Modları, Tamamen bitene kadar buradan yayınlanacak (Canlı Modpack Sistemi).",
       "downloads": [
         {
-          "label": "Google Drive",
-          "icon": "fa-google-drive",
-          "primary": true,
-          "platforms": {
-            "windows": "",
-            "android": ""
-          }
-        },
-        {
-          "label": "Paket Deposu",
+          "label": "Github",
           "url": "https://github.com/SametGkTe/Further-Modpack-Content",
           "icon": "fa-github"
         },
@@ -169,32 +141,43 @@
       ],
       "image": ""
     },
-    {
-      "id": "pet-eski-modpack",
-      "title": "P.E.T Klasik Modpack (Silinen Paket)",
-      "logo": "assets/img/logos/pet-modpack.png",
-      "category": "modpack",
-      "version": "Arşiv",
-      "platforms": "Windows, Android",
-      "size": "3.8 GB",
-      "description": "Psych Engine Türkiye döneminde paylaşılan klasik mod derlemesi. Platform linklerini archive.json dosyasından ekleyebilirsiniz.",
+	{
+      "id": "further-engine-beta",
+      "title": "Further Engine - Beta",
+      "logo": "assets/img/logos/further-engine.png",
+      "category": "engine",
+      "version": "Beta",
+      "platforms": "Android",
+      "size": "343 MB",
+      "description": "Further Engine'ın Beta Sürümü, çoğu özellik bozuk veya bitirilmemiş, sadece beta kullanıcıları için.",
       "downloads": [
-        {
-          "label": "Google Drive",
-          "icon": "fa-google-drive",
-          "primary": true,
-          "platforms": {
-            "windows": "",
-            "android": ""
-          }
-        },
         {
           "label": "MediaFire",
           "icon": "fa-cloud-arrow-down",
-          "platforms": [
-            { "label": "Windows (PC Paketi)", "sub": "ZIP · Masaüstü", "url": "", "icon": "fa-windows" },
-            { "label": "Android (Mobil Paketi)", "sub": "ZIP / .further Uyumlu", "url": "", "icon": "fa-android" }
-          ]
+          "primary": true,
+          "platforms": {
+            "android": "https://www.mediafire.com/file/tgmf245rhicm1x3/Further-Engine-Beta.apk/file",
+          }
+        }
+      ],
+      "image": ""
+    },
+	{
+      "id": "pet-v2-beta",
+      "title": "Psych Engine Türkiye V2 - Beta",
+      "logo": "assets/img/logos/pet-v2-beta.png",
+      "category": "engine",
+      "version": "V2 - Beta",
+      "platforms": "Android",
+      "size": "165 MB",
+      "description": "Psych Engine Türkiye V2'nin Beta Sürümü, çoğu şey bitirilmemiş şekilde, sadece beta kullanıcıların test edebilmesi için yapıldı.",
+      "downloads": [
+        {
+          "label": "MediaFire",
+          "icon": "fa-cloud-arrow-down",
+          "platforms": {
+            "android": "https://www.mediafire.com/file/udvqe3lypv4k98y/Psych+Engine+T%C3%BCrkiye+V2+Beta.apk/file"
+          }
         }
       ],
       "image": ""
@@ -205,9 +188,9 @@
       "logo": "assets/img/logos/further-tool.png",
       "category": "tool",
       "version": "v1.4.1",
-      "platforms": "Android, Windows",
-      "size": "Hafif Araç",
-      "description": "Siyah-beyaz mod yöneticisi, oyun güncelleme kontrolü ve yardımcı araç.",
+      "platforms": "Android",
+      "size": "257kb",
+      "description": "Further Engine için Androidde Mod Yönetebilme, Güvenli Modda başlatma, Further Güncelleme vb. sağlar",
       "downloads": [
         {
           "label": "İndir (v1.4.1)",
@@ -219,12 +202,6 @@
               "sub": "Standart Kurulum · v1.4.1",
               "url": "https://github.com/SametGkTe/Further-Tool/releases/download/v1.4.1/Further-Tool-v1.4.1-release.apk",
               "icon": "fa-android"
-            },
-            {
-              "label": "Windows (Masaüstü)",
-              "sub": "Yakında / Depo Üzerinden",
-              "url": "https://github.com/SametGkTe/Further-Tool/releases",
-              "icon": "fa-windows"
             }
           ]
         },
@@ -238,13 +215,13 @@
     },
     {
       "id": "fnf-porter-mobile",
-      "title": "FNF-Porter-Mobile",
+      "title": "FNF-Porter Mobile",
       "logo": "assets/img/logos/fnf-porter.png",
       "category": "tool",
       "version": "v1.0.0",
-      "platforms": "Android, Windows, Linux",
-      "size": "Açık Kaynak",
-      "description": "PC modlarını diğer motorlara ve mobil sürümlere uyarlamayı kolaylaştıran araç.",
+      "platforms": "Android",
+      "size": "200kb",
+      "description": "V-slice Modlarını Psych'e, Psych Modlarını V-slice'a çevirmeye yarayan (TAMAMEN DOĞRU DEĞİL) bir tool.",
       "downloads": [
         {
           "label": "İndir (v1.0.0)",
@@ -253,16 +230,10 @@
           "platforms": [
             {
               "label": "Android (APK)",
-              "sub": "Doğrudan Mobil Kurulum · v1.0.0",
+              "sub": "Mobil v1.0.0",
               "url": "https://github.com/SametGkTe/FNF-Porter-Mobile/releases/download/v1.0.0/FNF-Porter-For-Mobile-v1.0.0.apk",
               "icon": "fa-android"
             },
-            {
-              "label": "Windows / Linux (PC)",
-              "sub": "Python Aracı & Kaynak Kodu",
-              "url": "https://github.com/SametGkTe/FNF-Porter-Mobile",
-              "icon": "fa-windows"
-            }
           ]
         },
         {
